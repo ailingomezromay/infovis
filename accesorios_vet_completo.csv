@@ -1,0 +1,71 @@
+Fecha,Dia_Compra,Mes_Compra,Anio_Compra,Categoria,Subcategoria,Descripcion,Gatos,Medio_Pago,Cuotas,Monto_Total,Local_Plataforma,Notas
+2021-11-06,6.0,11.0,2021.0,Accesorio,Litera/baño,Litera para gatos,Todos,Efectivo,1.0,6800.0,Pet shop,Comprada al llegar Isi y Micky
+2021-12-05,5.0,12.0,2021.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-01-08,8.0,1.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-02-05,5.0,2.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-03-06,6.0,3.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-04-03,3.0,4.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-05-07,7.0,5.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Isi y Micky,Isi y Micky,Débito,1.0,16000.0,Veterinaria,2 gatos x $8000 c/u
+2022-05-10,10.0,5.0,2022.0,Veterinaria,Castración,Castración Micky (macho),Micky,Débito,1.0,35000.0,Veterinaria,
+2022-11-06,6.0,11.0,2022.0,Veterinaria,Vacuna,Vacuna anual — Isi y Micky,Isi y Micky,Débito,1.0,46000.0,Veterinaria,2 gatos x $1.800 c/u
+2022-11-06,6.0,11.0,2022.0,Higiene,Pipeta antiparasitaria,Pipetas antiparasitarias x4 — Isi y Micky,Isi y Micky,Débito,1.0,28000.0,Veterinaria/farmacia,4 pipetas marca habitual
+2022-11-14,14.0,11.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2022-12-12,12.0,12.0,2022.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2023-01-09,9.0,1.0,2023.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2023-02-06,6.0,2.0,2023.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2023-03-06,6.0,3.0,2023.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2023-04-03,3.0,4.0,2023.0,Veterinaria,Consulta,Consulta veterinaria — Kendra y Ron,Kendra y Ron,Débito,1.0,24000.0,Veterinaria,2 gatos x $12000 c/u
+2023-04-15,15.0,4.0,2023.0,Veterinaria,Castración,Castración Ron (macho),Ron,Efectivo,1.0,55000.0,Veterinaria,
+2023-06-20,20.0,6.0,2023.0,Veterinaria,Castración,Castración Kendra (hembra),Kendra,Efectivo,1.0,75000.0,Veterinaria,"Hembra, costo mayor por cirugía"
+2023-07-05,5.0,7.0,2023.0,Accesorio,Bebedero,Bebedero automático 1.6L con margarita,Todos,Tarjeta,1.0,22390.0,Mercado Libre,No adjunto FC en ML
+2023-10-06,6.0,10.0,2023.0,Higiene,Arena sanitaria,Piedras sanitarias Sanicat 21kg,Todos,Tarjeta,1.0,15990.0,Mercado Libre,FCB-00002-00219976
+2023-10-14,14.0,10.0,2023.0,Veterinaria,Vacuna,Vacuna anual — Kendra y Ron,Kendra y Ron,Débito,1.0,70000.0,Veterinaria,2 gatos x $3.500 c/u
+2023-10-14,14.0,10.0,2023.0,Higiene,Pipeta antiparasitaria,Pipetas antiparasitarias x4 — Kendra y Ron,Kendra y Ron,Débito,1.0,10400.0,Veterinaria/farmacia,4 pipetas marca habitual
+2023-11-02,2.0,11.0,2023.0,Higiene,Arena sanitaria,Piedras sanitarias Sanicat 21kg,Todos,Tarjeta,1.0,15990.0,Mercado Libre,No adjunto FC en ML
+2023-11-05,5.0,11.0,2023.0,Veterinaria,Vacuna,Vacuna anual — Isi y Micky,Isi y Micky,Débito,1.0,70000.0,Veterinaria,2 gatos x $3.500 c/u
+2023-11-05,5.0,11.0,2023.0,Higiene,Pipeta antiparasitaria,Pipetas antiparasitarias x4 — Isi y Micky,Isi y Micky,Débito,1.0,10400.0,Veterinaria/farmacia,4 pipetas marca habitual
+2023-12-02,2.0,12.0,2023.0,Higiene,Arena sanitaria,Piedras sanitarias Sanicat 21kg,Todos,Tarjeta,1.0,15990.0,Mercado Libre,FCB.0016-00001730
+2024-02-09,9.0,2.0,2024.0,Higiene,Arena sanitaria,Arena sanitaria Monkcat Bentonita Aglomerante 4kg x5 bolsas,Todos,Tarjeta,1.0,11755.0,Mercado Libre,FCB-00007-00080007
+2024-03-06,6.0,3.0,2024.0,Higiene,Arena sanitaria,Arena sanitaria Monkcat Bentonita Aglomerante 4kg x5 bolsas,Todos,Tarjeta,1.0,10181.0,Mercado Libre,No adjunto FC en ML
+2024-03-15,15.0,3.0,2024.0,Accesorio,Bebedero,Bomba de agua sumergible para bebedero,Todos,Tarjeta,1.0,13915.0,Mercado Libre,FCB-0013-00029093
+2024-04-10,10.0,4.0,2024.0,Accesorio,Baño,Cat It — alfombra para baño sanitario,Todos,Tarjeta,1.0,8500.0,Mercado Libre,FCB-00006-00028313
+2024-10-13,13.0,10.0,2024.0,Veterinaria,Vacuna,Vacuna anual — Kendra y Ron,Kendra y Ron,Débito,1.0,80000.0,Veterinaria,2 gatos x $9.000 c/u
+2024-10-13,13.0,10.0,2024.0,Higiene,Pipeta antiparasitaria,Pipetas antiparasitarias x4 — Kendra y Ron,Kendra y Ron,Débito,1.0,28000.0,Veterinaria/farmacia,4 pipetas marca habitual
+2024-11-03,3.0,11.0,2024.0,Veterinaria,Vacuna,Vacuna anual — Isi y Micky,Isi y Micky,Débito,1.0,80000.0,Veterinaria,2 gatos x $9.000 c/u
+2024-11-03,3.0,11.0,2024.0,Higiene,Pipeta antiparasitaria,Pipetas antiparasitarias x4 — Isi y Micky,Isi y Micky,Débito,1.0,28000.0,Veterinaria/farmacia,4 pipetas marca habitual
+2022-02-08,8.0,2.0,2022.0,Higiene,Baño,"Rubricat Premium Arena Aglomerante  Pack  11,4kg",Todos,Tarjeta,1.0,3000.0,ML,FCB-0004-00157298
+2022-02-24,24.0,2.0,2022.0,Higiene,Baño,"Rubricat Premium Arena Aglomerante  Pack  11,4kg",Todos,Tarjeta,1.0,3000.0,ML,FCB-0004-00155261
+2022-09-16,16.0,9.0,2022.0,Higiene,Baño,Piedras Sanitarias    20kg,Todos,Tarjeta,1.0,2990.0,ML,FCB-0005-00117795
+2023-01-11,11.0,1.0,2023.0,Vet ,Vitaminas,Recovery Royal Canin Gato,Todos,Tarjeta,1.0,3663.99,ML,FCB-00011-00012098
+2023-07-05,5.0,7.0,2023.0,Accesorio,Bebedero,Bebededo automatico de 1.6 L con margarita,Todos,Tarjeta,1.0,22390.0,ML,No Adjunto la fc en ML
+2023-10-06,6.0,10.0,2023.0,Higiene,Baño,Piedras Sanitarias    Sanicat   21kg,Todos,Tarjeta,1.0,15990.0,ML,FCB-00002-00219976
+2023-11-02,2.0,11.0,2023.0,Higiene,Baño,Piedras Sanitarias    Sanicat   21kg,Todos,Tarjeta,1.0,15990.0,ML,No Adjunto la fc en ML
+2023-12-02,2.0,12.0,2023.0,Higiene,Baño,Piedras Sanitarias    Sanicat   21kg,Todos,Tarjeta,1.0,15990.0,ML,FCB.0016-00001730
+2024-02-09,9.0,2.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,11755.99,ML,FCB-00007-00080007
+2024-03-06,6.0,3.0,2024.0,Accesorio,Baño,Cat it alfombra para baño sanitario,Todos,Tarjeta,1.0,17884.99,ML,FCB- 00006-00028313
+2024-03-06,6.0,3.0,2024.0,Accesorio,Bebedero,Bomba de agua bebedero gatos sumergible,Todos,Tarjeta,1.0,13914.99,ML,FCB-0013-00029093
+2024-03-06,6.0,3.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,10180.99,ML,No Adjunto la fc en ML
+2024-03-28,28.0,3.0,2024.0,Accesorio,Bebedero,Filtro  Repuesto Flower bebedero  gato catit 1.5 lts pack 2 und,Todos,Tarjeta,1.0,8564.99,ML,FCB-0013-00030524
+2024-04-01,1.0,4.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,13184.99,ML,FCB-00007-00081838
+2024-05-07,7.0,5.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,16464.99,ML,FCB-00004-00042459
+2024-06-03,3.0,6.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,15770.99,ML,FCB-00004-00043188
+2024-07-17,17.0,7.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,14833.5,ML,FCB-00004-00045013
+2024-09-10,10.0,9.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,16100.49,ML,FCB-00004-00047656
+2024-09-18,18.0,9.0,2024.0,Accesorio,Baño,Filtros x2 para litera cat it desing petit,Todos,Tarjeta,1.0,6550.0,ML,No Adjunto la fc en ML
+2024-10-02,2.0,10.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,16100.49,ML,FCB-00004-00048568
+2024-10-31,31.0,10.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,21044.99,ML,FCB-00004-00049874
+2024-12-30,30.0,12.0,2024.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,17106.44,ML,FCB-00004-00053534
+2025-01-06,6.0,1.0,2025.0,Accesorio,Bebedero,Bomba de agua bebedero gatos sumergible,Todos,Tarjeta,1.0,21189.99,ML,FCB-0012-00204980
+2025-02-03,3.0,2.0,2025.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,17293.0,ML,FCB-00004-00055832
+2025-03-05,5.0,3.0,2025.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,17475.44,ML,FCB-00004-000040110
+2025-04-07,7.0,4.0,2025.0,Higiene,Baño,Arena Sanitaria para gatos Monkcat Bentonita Aglomerante  4kg x 5 bolsas,Todos,Tarjeta,1.0,17475.44,ML,FCB-00004-000060230
+2025-05-06,6.0,5.0,2025.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,34988.2,ML,FCB-00014-00064177
+2025-07-31,31.0,7.0,2025.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,34988.2,ML,FCB-00014-00066187
+2025-09-29,29.0,9.0,2025.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,32949.0,ML,FCB-00014-00069426
+2025-11-05,5.0,11.0,2025.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,32922.0,ML,FCB-0003-00000001
+2025-11-28,28.0,11.0,2025.0,Otro,Pipetas,Pipeta gatos frontline plus x4,Todos,Tarjeta,1.0,39130.39,ML,FCB-00009-00085723
+2025-12-13,13.0,12.0,2025.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,32922.0,ML,FCB-0003-00000030
+2026-01-06,6.0,1.0,2026.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,32922.0,ML,FCB-0003-00000408
+2026-03-03,3.0,3.0,2026.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,41017.76,ML,FCB-00003-00089091
+2006-04-21,21.0,4.0,2006.0,Higiene,Baño,Piedritas sanitarias Para gatos Aglomerante  Rubriat Premium Aroma Neutro  30kg,Todos,Tarjeta,1.0,51000.0,ML,Aun no esta cargada la fc en ml
+,,,,,,,,,,1666057.24,,
