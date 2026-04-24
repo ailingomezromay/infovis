@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+  <h1>Bumpchart</h1>
+</body><object type="image/svg+xml" data="./Bumpchat-Inkscape.svg"></object>
+</html>
 
+  <h1>Flourish-Line chart</h1>
+<div class="flourish-embed flourish-chart" data-src="visualisation/28475215">
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+  <noscript><img src="https://public.flourish.studio/visualisation/28475215/thumbnail" width="100%" alt="visualization" /></noscript>
+</div>
+
+  <h1>Flourish-bumpchart</h1>
+<div class="flourish-embed flourish-chart" data-src="visualisation/28475481">
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+  <noscript><img src="https://public.flourish.studio/visualisation/28475481/thumbnail" width="100%" alt="visualization" /></noscript>
+</div>
