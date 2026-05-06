@@ -1,6 +1,3 @@
-
-Copiar
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -608,10 +605,22 @@ Copiar
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(30,20,16,0.96) 0%,
-        rgba(30,20,16,0.7) 50%,
-        rgba(30,20,16,0.25) 100%
+        rgba(44,24,16,0.96) 0%,
+        rgba(44,24,16,0.65) 50%,
+        rgba(44,24,16,0.2) 100%
       );
+    }
+    /* patitas decorativas en el hero */
+    .hero-cover-overlay::after {
+      content: '🐾  🐾  🐾  🐾  🐾  🐾  🐾  🐾';
+      position: absolute;
+      top: 24px;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 8px;
+      opacity: 0.08;
+      pointer-events: none;
     }
     .hero-cover-content {
       position: relative;
@@ -677,7 +686,7 @@ Copiar
     /* ─── CAT COVER CARDS ─── */
     .cats-cover-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       border-top: 1px solid var(--line);
     }
     .cat-cover-card {
@@ -686,6 +695,10 @@ Copiar
       overflow: hidden;
       transition: background 0.25s;
     }
+    .cat-cover-card:nth-child(2) { border-right: none; }
+    .cat-cover-card:nth-child(3),
+    .cat-cover-card:nth-child(4) { border-top: 1px solid var(--line); }
+    .cat-cover-card:nth-child(4) { border-right: none; }
     .cat-cover-card:hover { background: var(--rust-pale); }
     .cat-cover-photo-wrap {
       position: relative;
@@ -693,47 +706,69 @@ Copiar
     }
     .cat-cover-photo {
       width: 100%;
-      height: 220px;
+      height: 360px;
       object-fit: cover;
+      object-position: center 20%;
       display: block;
-      filter: saturate(0.85);
+      filter: saturate(0.88);
       transition: filter 0.5s, transform 0.5s;
     }
     .cat-cover-card:hover .cat-cover-photo {
       filter: saturate(1.15);
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
     .cat-cover-paw {
       position: absolute;
-      bottom: 10px;
-      right: 12px;
-      font-size: 14px;
+      bottom: 12px;
+      right: 14px;
+      font-size: 18px;
       opacity: 0;
       transform: scale(0.5) rotate(-15deg);
       transition: opacity 0.35s, transform 0.35s;
       pointer-events: none;
     }
     .cat-cover-card:hover .cat-cover-paw {
-      opacity: 0.4;
+      opacity: 0.5;
       transform: scale(1) rotate(0deg);
     }
     .cat-cover-body {
-      padding: 20px 20px 24px;
+      padding: 24px 28px 28px;
       position: relative;
+    }
+ 
+    /* ─── PAW SEPARATOR ─── */
+    .paw-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--cream);
+    }
+    .paw-sep-line {
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: var(--line);
+    }
+    .paw-sep-icon {
+      font-size: 14px;
+      opacity: 0.35;
+      letter-spacing: 6px;
     }
  
     /* ─── RESPONSIVE cover ─── */
     @media (max-width: 900px) {
       .hero-cover-content { padding: 40px 24px 40px; }
       .cats-cover-grid { grid-template-columns: 1fr 1fr; }
-      .cat-cover-card:nth-child(2) { border-right: none; }
-      .cat-cover-card:nth-child(3),
-      .cat-cover-card:nth-child(4) { border-top: 1px solid var(--line); }
-      .cat-cover-card:nth-child(4) { border-right: none; }
+      .cat-cover-photo { height: 280px; }
     }
     @media (max-width: 600px) {
       .hero-cover { min-height: 70vh; }
       .cats-cover-grid { grid-template-columns: 1fr 1fr; }
+      .cat-cover-photo { height: 200px; }
     }
  
     /* ─── YEAR BARS ─── */
@@ -952,7 +987,7 @@ Copiar
  
     <div class="cat-cover-card">
       <div class="cat-cover-photo-wrap">
-        <img src="Micky e Isi.png" alt="Isi" class="cat-cover-photo" style="object-position: right center;">
+        <img src="Isi_vf1.jpeg" alt="Isi" class="cat-cover-photo" style="object-position: center 15%;">
         <div class="cat-cover-paw">🐾</div>
       </div>
       <div class="cat-cover-body">
@@ -1022,6 +1057,13 @@ Copiar
   </div>
 </div>
  
+ 
+<div class="paw-separator">
+  <div class="paw-sep-line"></div>
+  <div class="paw-sep-icon">🐾 🐾 🐾</div>
+  <div class="paw-sep-line"></div>
+</div>
+ 
 <!-- VIZ 1: GASTO -->
 <section class="section" id="gasto" style="background: white;">
   <div class="section-header fade-in">
@@ -1045,6 +1087,13 @@ Copiar
     <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026)</div>
   </div>
 </section>
+ 
+ 
+<div class="paw-separator">
+  <div class="paw-sep-line"></div>
+  <div class="paw-sep-icon">🐾 🐾 🐾</div>
+  <div class="paw-sep-line"></div>
+</div>
  
 <!-- VIZ 2: TIMELINE -->
 <section class="section" id="timeline">
@@ -1100,6 +1149,13 @@ Copiar
     </div>
   </div>
 </section>
+ 
+ 
+<div class="paw-separator">
+  <div class="paw-sep-line"></div>
+  <div class="paw-sep-icon">🐾 🐾 🐾</div>
+  <div class="paw-sep-line"></div>
+</div>
  
 <!-- VIZ 3: GASTO POR AÑO -->
 <section class="section" id="por-anio">
@@ -1159,6 +1215,13 @@ Copiar
     <div class="viz-source">Fuente: registro personal consolidado (2021–2026)</div>
   </div>
 </section>
+ 
+ 
+<div class="paw-separator">
+  <div class="paw-sep-line"></div>
+  <div class="paw-sep-icon">🐾 🐾 🐾</div>
+  <div class="paw-sep-line"></div>
+</div>
  
 <!-- VIZ 4: CATEGORIAS CON ILUSTRACIONES -->
 <section class="section" id="categorias" style="background: white;">
@@ -1312,6 +1375,13 @@ Copiar
   </div>
 </section>
  
+ 
+<div class="paw-separator">
+  <div class="paw-sep-line"></div>
+  <div class="paw-sep-icon">🐾 🐾 🐾</div>
+  <div class="paw-sep-line"></div>
+</div>
+ 
 <!-- VIZ 5: MARCAS -->
 <section class="section" id="marcas">
   <div class="section-header fade-in">
@@ -1341,17 +1411,18 @@ Copiar
 </section>
  
 <!-- FOOTER -->
+<div style="text-align:center; padding:16px; background:var(--stone); border-top:1px solid var(--line); font-size:20px; letter-spacing:10px; opacity:0.5;">🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾</div>
 <footer>
   <div class="footer-left">
     <div class="footer-title">Mis gatos en datos</div>
     <p class="footer-subtitle">
       Un proyecto de visualización de datos personales sobre cuatro años<br>
       de amor felino — y su impacto en la billetera.<br>
-      <span style="color:var(--rust-warm); font-style:italic;">Hecho con datos, café y muchas patitas encima del teclado.</span>
+      <span style="color:var(--rust); font-style:italic;">Hecho con datos, café y muchas patitas encima del teclado.</span>
     </p>
   </div>
   <div class="footer-right">
-    <div class="footer-paw">🐾</div>
+    <div class="footer-paw" style="font-size:2rem; letter-spacing:6px; margin-bottom:12px; opacity:0.4;">🐾 🐾</div>
     <div class="footer-credit">
       Ailin Gomez Romay<br>
       Maestría en Ciencia de Datos<br>
@@ -1376,3 +1447,13 @@ Copiar
  
 </body>
 </html>
+ 
+
+
+
+
+
+
+
+
+
