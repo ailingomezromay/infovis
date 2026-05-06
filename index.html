@@ -1,445 +1,1378 @@
+
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis gatos en datos 🐱</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>Mis gatos en datos</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
  
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cream: #FFF8F8;
+      --ink: #2C1810;
+      --ink-soft: #5A3C36;
+      --ink-muted: #AA8880;
+      --rust: #CC7878;
+      --rust-warm: #D48888;
+      --rust-light: #F5D8D8;
+      --rust-pale: #FFF0F0;
+      --amber: #C8A068;
+      --amber-pale: #FFFAF5;
+      --stone: #F0E0E0;
+      --line: #EDD8D8;
+    }
+ 
+    html { scroll-behavior: smooth; }
  
     body {
-      font-family: 'Nunito', sans-serif;
-      background: #fff8f2;
-      color: #333;
-    }
- 
-    header {
-      background: #ff7043;
-      color: white;
-      padding: 48px 24px 36px;
-      text-align: center;
-    }
- 
-    header h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
- 
-    header p {
-      font-size: 1rem;
-      opacity: 0.92;
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
- 
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.25);
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
-    }
- 
-    section {
-      padding: 60px 20px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
- 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: #222;
-    }
- 
-    .pregunta {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #ff7043;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
- 
-    .subtexto {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 28px;
-      line-height: 1.6;
-    }
- 
-    .sep {
-      height: 5px;
-      border-radius: 4px;
-      margin-bottom: 32px;
-      width: 48px;
-    }
- 
-    .gatos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 20px;
-      margin-top: 32px;
-    }
- 
-    .gato-card {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      background: white;
-    }
- 
-    .gato-card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-    }
- 
-    .gato-info { padding: 16px; }
- 
-    .gato-nombre {
-      font-size: 1.15rem;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
- 
-    .gato-rol {
-      font-size: 0.78rem;
-      font-weight: 600;
-      border-radius: 12px;
-      padding: 2px 10px;
-      display: inline-block;
-      margin-bottom: 8px;
-      color: white;
-    }
- 
-    .gato-desc {
-      font-size: 0.85rem;
-      color: #666;
-      line-height: 1.5;
-    }
- 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
- 
-    .stat {
-      border-radius: 14px;
-      padding: 22px 18px;
-      text-align: center;
-      color: white;
-    }
- 
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
- 
-    .stat-label {
-      font-size: 0.82rem;
-      opacity: 0.9;
-      line-height: 1.4;
-    }
- 
-    .viz-card {
-      background: white;
-      border-radius: 16px;
-      padding: 32px 28px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      margin-top: 8px;
-    }
- 
-    .viz-tool {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
- 
-    .viz-nota {
-      margin-top: 16px;
-      font-size: 0.82rem;
-      color: #888;
-      font-style: italic;
-    }
- 
-    .timeline {
-      margin-top: 24px;
-      border-left: 3px solid #ffb74d;
-      padding-left: 24px;
-    }
- 
-    .tl-item {
-      margin-bottom: 28px;
-      position: relative;
-    }
- 
-    .tl-item::before {
-      content: '';
-      position: absolute;
-      left: -31px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #ff7043;
-      border: 3px solid #fff8f2;
-    }
- 
-    .tl-fecha {
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #ff7043;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 2px;
-    }
- 
-    .tl-titulo {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
- 
-    .tl-desc {
-      font-size: 0.87rem;
-      color: #666;
-      line-height: 1.5;
-    }
- 
-    .coming-soon {
-      background: #f5f5f5;
-      border-radius: 14px;
-      padding: 40px;
-      text-align: center;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
- 
-    .coming-soon span {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 10px;
-    }
- 
-    .coming-soon strong { color: #888; }
- 
-    .bg-1 { background: #fff8f2; }
-    .bg-2 { background: #fff3e0; }
- 
-    footer {
-      background: #333;
-      color: #ccc;
-      text-align: center;
-      padding: 36px 24px;
-      font-size: 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
       line-height: 1.7;
     }
  
-    footer strong { color: white; }
- 
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
-      .viz-card { padding: 20px 16px; }
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: rgba(255, 248, 248, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
     }
  
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+ 
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+ 
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+ 
+    .nav-links a:hover { color: var(--amber); }
+ 
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+ 
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 48px 80px 64px;
+      border-right: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .hero-left::before {
+      content: '🐾';
+      position: absolute;
+      bottom: 32px;
+      right: 32px;
+      font-size: 80px;
+      opacity: 0.04;
+      transform: rotate(-20deg);
+      pointer-events: none;
+      user-select: none;
+    }
+ 
+    .hero-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+ 
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rust);
+    }
+ 
+    .hero-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+ 
+    .hero-title em {
+      font-style: italic;
+      color: var(--rust);
+    }
+ 
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 420px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+ 
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+ 
+    .meta-item {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+ 
+    .meta-item span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      opacity: 0.6;
+      margin-bottom: 2px;
+    }
+ 
+    .hero-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+ 
+    .hero-photo {
+      overflow: hidden;
+      position: relative;
+    }
+ 
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+ 
+    .hero-photo:hover img { transform: scale(1.04); }
+ 
+    .hero-photo-label {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(26,23,20,0.75);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 2px;
+      backdrop-filter: blur(4px);
+    }
+ 
+    /* ─── STATS STRIP ─── */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+ 
+    .stat-item {
+      padding: 40px 32px;
+      border-right: 1px solid var(--line);
+      transition: background 0.25s;
+    }
+ 
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { background: var(--rust-pale); }
+ 
+    .stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+ 
+    .stat-num em { font-style: italic; color: var(--rust); }
+ 
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+ 
+    /* ─── SECTIONS ─── */
+    .section {
+      padding: 96px 64px;
+      border-bottom: 1px solid var(--line);
+    }
+ 
+    .section-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+ 
+    .section-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 5rem;
+      color: var(--stone);
+      line-height: 1;
+      font-style: italic;
+    }
+ 
+    .section-info {}
+ 
+    .section-tool {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+ 
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+ 
+    .section-question {
+      font-size: 1rem;
+      color: var(--amber);
+      font-style: italic;
+      margin-bottom: 16px;
+      font-family: 'DM Serif Display', serif;
+    }
+ 
+    .section-desc {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+ 
+    /* ─── VIZ CONTAINER ─── */
+    .viz-container {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+ 
+    .viz-inner {
+      padding: 40px;
+    }
+ 
+    .viz-source {
+      padding: 14px 40px;
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+ 
+    .viz-source::before {
+      content: '';
+      width: 16px; height: 1px;
+      background: var(--ink-muted);
+      display: inline-block;
+    }
+ 
+    /* ─── TIMELINE ─── */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      background: white;
+    }
+ 
+    .tl-item {
+      padding: 32px 28px;
+      border-right: 1px solid var(--line);
+      transition: background 0.25s;
+      position: relative;
+    }
+ 
+    .tl-item:last-child { border-right: none; }
+    .tl-item:hover { background: var(--rust-pale); }
+ 
+    .tl-year {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 12px;
+    }
+ 
+    .tl-dot {
+      width: 8px; height: 8px;
+      background: var(--rust);
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+ 
+    .tl-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+ 
+    .tl-desc {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+ 
+    /* ─── CATS GRID ─── */
+    .cats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+ 
+    .cat-card {
+      background: white;
+      border-right: 1px solid var(--line);
+      transition: background 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+      position: relative;
+    }
+ 
+    .cat-card:last-child { border-right: none; }
+ 
+    .cat-card:hover {
+      background: var(--rust-pale);
+      z-index: 1;
+    }
+ 
+    .cat-photo-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+ 
+    .cat-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.85) brightness(0.97);
+      transition: filter 0.5s ease, transform 0.5s ease;
+      transform-origin: center center;
+    }
+ 
+    .cat-card:hover .cat-photo {
+      filter: saturate(1.15) brightness(1.03);
+      transform: scale(1.06);
+    }
+ 
+    /* nombre flota hacia arriba al hover */
+    .cat-body {
+      padding: 20px;
+    }
+ 
+    .cat-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+ 
+    .cat-card:hover .cat-name {
+      color: var(--rust-warm);
+      transform: translateX(4px);
+    }
+ 
+    .cat-role {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 10px;
+      transition: opacity 0.3s;
+    }
+ 
+    .cat-card:hover .cat-role { opacity: 0.7; }
+ 
+    .cat-desc {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      transition: color 0.3s;
+    }
+ 
+    .cat-card:hover .cat-desc { color: var(--ink); }
+ 
+    /* patita que aparece en hover */
+    .cat-paw {
+      position: absolute;
+      bottom: 14px;
+      right: 16px;
+      font-size: 14px;
+      opacity: 0;
+      transform: scale(0.5) rotate(-15deg);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      pointer-events: none;
+    }
+ 
+    .cat-card:hover .cat-paw {
+      opacity: 0.35;
+      transform: scale(1) rotate(0deg);
+    }
+ 
+    /* ─── COMING SOON ─── */
+    .coming-soon {
+      background: var(--cream);
+      border: 1px dashed var(--line);
+      border-radius: 4px;
+      padding: 64px 40px;
+      text-align: center;
+    }
+ 
+    .cs-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      opacity: 0.4;
+    }
+ 
+    .cs-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+ 
+    .cs-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink-soft);
+    }
+ 
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 56px 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      border-top: 1px solid var(--line);
+    }
+ 
+    .footer-left {}
+ 
+    .footer-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+ 
+    .footer-subtitle {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+ 
+    .footer-right {
+      text-align: right;
+    }
+ 
+    .footer-credit {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      line-height: 2;
+    }
+ 
+    .footer-paw {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      opacity: 0.3;
+    }
+ 
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { gap: 20px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 80px 24px 40px; border-right: none; border-bottom: 1px solid var(--line); }
+      .hero-right { grid-template-columns: 1fr 1fr; min-height: 300px; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-right: 1px solid var(--line); border-top: 1px solid var(--line); }
+      .stat-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .section { padding: 64px 24px; }
+      .section-header { grid-template-columns: 1fr; gap: 16px; }
+      .section-num { font-size: 3rem; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+      .tl-item:nth-child(2) { border-right: none; }
+      .tl-item:nth-child(3) { border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
+      .tl-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .cats-grid { grid-template-columns: 1fr 1fr; }
+      .cat-card:nth-child(2) { border-right: none; }
+      .cat-card:nth-child(3) { border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
+      .cat-card:nth-child(4) { border-top: 1px solid var(--line); }
+      footer { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px; }
+      .footer-right { text-align: left; }
+      .viz-inner { padding: 20px; }
+    }
+ 
+    @media (max-width: 600px) {
+      .hero-right { grid-template-columns: 1fr 1fr; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+      .tl-item { border-right: none !important; border-top: 1px solid var(--line); }
+      .tl-item:first-child { border-top: none; }
+      .cats-grid { grid-template-columns: 1fr 1fr; }
+    }
+ 
+    /* ─── HERO COVER (Propuesta A) ─── */
+    .hero-cover {
+      position: relative;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: flex-end;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+    .hero-cover-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .hero-cover-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(30,20,16,0.96) 0%,
+        rgba(30,20,16,0.7) 50%,
+        rgba(30,20,16,0.25) 100%
+      );
+    }
+    .hero-cover-content {
+      position: relative;
+      z-index: 2;
+      padding: 64px 64px 56px;
+      max-width: 720px;
+    }
+    .hero-cover-badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-cover-badge::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--rust);
+    }
+    .hero-cover-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      color: white;
+      line-height: 1.08;
+      margin-bottom: 24px;
+    }
+    .hero-cover-title em {
+      font-style: italic;
+      color: var(--rust-warm);
+    }
+    .hero-cover-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .hero-cover-meta {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: white;
+    }
+    .hero-meta-item span {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 3px;
+    }
+ 
+    /* ─── CAT COVER CARDS ─── */
+    .cats-cover-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+    }
+    .cat-cover-card {
+      border-right: 1px solid var(--line);
+      background: white;
+      overflow: hidden;
+      transition: background 0.25s;
+    }
+    .cat-cover-card:hover { background: var(--rust-pale); }
+    .cat-cover-photo-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-cover-photo {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.85);
+      transition: filter 0.5s, transform 0.5s;
+    }
+    .cat-cover-card:hover .cat-cover-photo {
+      filter: saturate(1.15);
+      transform: scale(1.05);
+    }
+    .cat-cover-paw {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      font-size: 14px;
+      opacity: 0;
+      transform: scale(0.5) rotate(-15deg);
+      transition: opacity 0.35s, transform 0.35s;
+      pointer-events: none;
+    }
+    .cat-cover-card:hover .cat-cover-paw {
+      opacity: 0.4;
+      transform: scale(1) rotate(0deg);
+    }
+    .cat-cover-body {
+      padding: 20px 20px 24px;
+      position: relative;
+    }
+ 
+    /* ─── RESPONSIVE cover ─── */
+    @media (max-width: 900px) {
+      .hero-cover-content { padding: 40px 24px 40px; }
+      .cats-cover-grid { grid-template-columns: 1fr 1fr; }
+      .cat-cover-card:nth-child(2) { border-right: none; }
+      .cat-cover-card:nth-child(3),
+      .cat-cover-card:nth-child(4) { border-top: 1px solid var(--line); }
+      .cat-cover-card:nth-child(4) { border-right: none; }
+    }
+    @media (max-width: 600px) {
+      .hero-cover { min-height: 70vh; }
+      .cats-cover-grid { grid-template-columns: 1fr 1fr; }
+    }
+ 
+    /* ─── YEAR BARS ─── */
+    .year-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      padding: 0 6px;
+    }
+    .year-bar {
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+      transition: opacity 0.2s;
+      min-height: 3px;
+    }
+    .year-bar-wrap:hover .year-bar { opacity: 0.75; }
+    .year-bar-label {
+      font-size: 0.7rem;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+      text-align: center;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .year-bar-year {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin-top: 8px;
+      text-align: center;
+    }
+ 
+    /* ─── CATEGORY SPENDING CARDS ─── */
+    .cat-spending-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .cat-spend-card {
+      background: white;
+      border-right: 1px solid var(--line);
+      padding: 28px 16px 20px;
+      text-align: center;
+      transition: background 0.25s;
+    }
+    .cat-spend-card:last-child { border-right: none; }
+    .cat-spend-card:hover { background: var(--rust-pale); }
+    .spend-icon { display: block; margin: 0 auto 14px; }
+    .spend-pct {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .spend-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 6px;
+    }
+    .spend-total {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+ 
+    /* ─── VET BREAKDOWN ─── */
+    .vet-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .vet-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 20px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .vet-item:hover { background: var(--rust-pale); }
+    .vet-icon { flex-shrink: 0; }
+    .vet-info { flex: 1; }
+    .vet-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .vet-bar-wrap {
+      height: 5px;
+      background: var(--stone);
+      border-radius: 3px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+    .vet-bar {
+      height: 5px;
+      border-radius: 3px;
+      transition: width 1s ease;
+    }
+    .vet-amount {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+ 
+    /* ─── RESPONSIVE additions ─── */
+    @media (max-width: 900px) {
+      .cat-spending-grid { grid-template-columns: repeat(3, 1fr); }
+      .cat-spend-card:nth-child(3) { border-right: none; }
+      .cat-spend-card:nth-child(4),
+      .cat-spend-card:nth-child(5) { border-top: 1px solid var(--line); }
+      .cat-spend-card:nth-child(5) { border-right: none; }
+    }
+    @media (max-width: 600px) {
+      .cat-spending-grid { grid-template-columns: 1fr 1fr; }
+      .year-bar-label { font-size: 0.62rem; }
+    }
+ 
+    /* ─── PAW ACCENTS ─── */
+    .paw-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .paw-divider::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rust-warm);
+    }
+    .paw-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .paw-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--rust-light);
+    }
+    .paw-dot.big {
+      width: 8px; height: 8px;
+      background: var(--rust);
+    }
+ 
+    /* ─── SECTION accent bar ─── */
+    .accent-bar {
+      width: 3px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--rust-light), var(--amber));
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
   </style>
 </head>
 <body>
  
-<header>
-  <div class="badge">TP · Visualización de Datos Personales · ECD 2025.B</div>
-  <h1>Mis gatos en datos 🐾</h1>
-  <p>Desde noviembre de 2021 convivo con Isi, Micky, Kendra y Ron.
-     Este proyecto visualiza cuánto los quiero... y cuánto me cuestan.</p>
-</header>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Mis gatos en datos</a>
+  <ul class="nav-links">
+    <li><a href="#protagonistas">Los gatos</a></li>
+    <li><a href="#gasto">Gasto</a></li>
+    <li><a href="#timeline">Historia</a></li>
+    <li><a href="#por-anio">Por año</a></li>
+    <li><a href="#categorias">Categorías</a></li>
+    <li><a href="#marcas">Marcas</a></li>
+  </ul>
+</nav>
  
+<!-- HERO + PROTAGONISTAS — Propuesta A -->
+<section id="protagonistas">
  
-<div class="bg-1">
-<section>
-  <h2>Los protagonistas 🐱</h2>
-  <p class="pregunta">¿Quiénes son los dueños de mi billetera?</p>
-  <div class="sep" style="background:#ff7043;"></div>
+  <!-- Portada con foto de fondo -->
+  <div class="hero-cover">
+    <img src="Micky e Isi.png" alt="Isi y Micky" class="hero-cover-img">
+    <div class="hero-cover-overlay"></div>
+    <div class="hero-cover-content">
+      <div class="hero-cover-badge">Visualización de Datos Personales · ECD 2025.B</div>
+      <h1 class="hero-cover-title">Cuatro gatos,<br><em>tres millones</em><br>de razones.</h1>
+      <p class="hero-cover-desc">
+        Soy Ailin. Desde noviembre de 2021 comparto mi vida — y mi sueldo —
+        con Isi, Micky, Kendra y Ron. Este proyecto nació de una pregunta simple:
+        ¿cuánto cuestan realmente cuatro años de amor felino?
+      </p>
+      <div class="hero-cover-meta">
+        <div class="hero-meta-item"><span>Autora</span>Ailin Gomez Romay</div>
+        <div class="hero-meta-item"><span>Período</span>2021 – 2026</div>
+        <div class="hero-meta-item"><span>Datos</span>Registro personal</div>
+      </div>
+    </div>
+  </div>
  
-  <div class="gatos-grid">
+  <!-- Tarjetas de gatos con fotos -->
+  <div class="cats-cover-grid fade-in">
  
-    <div class="gato-card">
-      <img src="Micky e Isi.png" alt="Isi de bebé" style="object-position: right center;">
-      <div class="gato-info">
-        <div class="gato-nombre">Isi 🧡</div>
-        <span class="gato-rol" style="background:#ff7043;">♀ Mamá · Nov 2021</span>
-        <p class="gato-desc">Atigrada naranja y blanca. Llegó de rescate con 3 semanas. La más cariñosa de todos.</p>
+    <div class="cat-cover-card">
+      <div class="cat-cover-photo-wrap">
+        <img src="Micky e Isi.png" alt="Isi" class="cat-cover-photo" style="object-position: right center;">
+        <div class="cat-cover-paw">🐾</div>
+      </div>
+      <div class="cat-cover-body">
+        <div class="cat-name">Isi</div>
+        <div class="cat-role" style="color:#CC7878;">♀ Mamá · Nov 2021</div>
+        <p class="cat-desc">Atigrada naranja y blanca. Llegó de rescate con 3 semanas. La más cariñosa de todos.</p>
       </div>
     </div>
  
-    <div class="gato-card">
-      <img src="Micky.jpg" alt="Micky" style="object-position: center top;">
-      <div class="gato-info">
-        <div class="gato-nombre">Micky 🩶</div>
-        <span class="gato-rol" style="background:#78909c;">♂ Papá · Nov 2021</span>
-        <p class="gato-desc">Gris atigrado. Llegó junto a Isi. Tranquilo, dormilón y muy serio.</p>
+    <div class="cat-cover-card">
+      <div class="cat-cover-photo-wrap">
+        <img src="Micky.jpg" alt="Micky" class="cat-cover-photo" style="object-position: center top;">
+        <div class="cat-cover-paw">🐾</div>
+      </div>
+      <div class="cat-cover-body">
+        <div class="cat-name">Micky</div>
+        <div class="cat-role" style="color:#AA8880;">♂ Papá · Nov 2021</div>
+        <p class="cat-desc">Gris atigrado. Llegó junto a Isi. Tranquilo, dormilón y muy serio.</p>
       </div>
     </div>
  
-    <div class="gato-card">
-      <img src="Kendra.jpg" alt="Kendra" style="object-position: center top;">
-      <div class="gato-info">
-        <div class="gato-nombre">Kendra 🤍</div>
-        <span class="gato-rol" style="background:#ab47bc;">♀ Hija · Oct 2022</span>
-        <p class="gato-desc">Blanca con manchas oscuras. Nació en casa. La más curiosa e inquieta.</p>
+    <div class="cat-cover-card">
+      <div class="cat-cover-photo-wrap">
+        <img src="Kendra.jpg" alt="Kendra" class="cat-cover-photo" style="object-position: center top;">
+        <div class="cat-cover-paw">🐾</div>
+      </div>
+      <div class="cat-cover-body">
+        <div class="cat-name">Kendra</div>
+        <div class="cat-role" style="color:#C8A068;">♀ Hija · Oct 2022</div>
+        <p class="cat-desc">Blanca con manchas oscuras. Nació en casa. La más curiosa e inquieta.</p>
       </div>
     </div>
  
-    <div class="gato-card">
-      <img src="Ron.jpg" alt="Ron" style="object-position: center top;">
-      <div class="gato-info">
-        <div class="gato-nombre">Ron 🧡</div>
-        <span class="gato-rol" style="background:#ef6c00;">♂ Hijo · Oct 2022</span>
-        <p class="gato-desc">Naranja intenso. Hermano de Kendra. El más juguetón y travieso de la casa.</p>
+    <div class="cat-cover-card" style="border-right:none;">
+      <div class="cat-cover-photo-wrap">
+        <img src="Ron.jpg" alt="Ron" class="cat-cover-photo" style="object-position: center top;">
+        <div class="cat-cover-paw">🐾</div>
+      </div>
+      <div class="cat-cover-body">
+        <div class="cat-name">Ron</div>
+        <div class="cat-role" style="color:#C8A068;">♂ Hijo · Oct 2022</div>
+        <p class="cat-desc">Naranja intenso. Hermano de Kendra. El más juguetón y travieso de la casa.</p>
       </div>
     </div>
  
   </div>
+ 
 </section>
+ 
+<!-- STATS -->
+<div class="stats-strip fade-in">
+  <div class="stat-item">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Gatos en la familia</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num"><em>$3,1M</em></div>
+    <div class="stat-label">Gastados desde 2021</div>
+  </div>
+  <div class="stat-item" style="background: var(--rust-pale);">
+    <div class="stat-num">36<em>+</em></div>
+    <div class="stat-label">Compras de alimento</div>
+  </div>
+  <div class="stat-item" style="background: var(--amber-pale);">
+    <div class="stat-num" style="color: var(--amber);">90<em style="color:var(--amber);">×</em></div>
+    <div class="stat-label">Sube el precio en 4 años</div>
+  </div>
 </div>
  
- 
-<div class="bg-2">
-<section>
-  <h2>En números 📊</h2>
-  <p class="pregunta">¿Cuánto suman 4 años de gatos?</p>
-  <div class="sep" style="background:#ffb74d;"></div>
- 
-  <div class="stats">
-    <div class="stat" style="background:#ff7043;">
-      <div class="stat-num">4</div>
-      <div class="stat-label">gatos en la familia</div>
-    </div>
-    <div class="stat" style="background:#ef6c00;">
-      <div class="stat-num">$3,1M</div>
-      <div class="stat-label">gastados desde 2021</div>
-    </div>
-    <div class="stat" style="background:#ab47bc;">
-      <div class="stat-num">36+</div>
-      <div class="stat-label">compras de alimento</div>
-    </div>
-    <div class="stat" style="background:#42a5f5;">
-      <div class="stat-num">90x</div>
-      <div class="stat-label">sube el precio del alimento en 4 años</div>
+<!-- VIZ 1: GASTO -->
+<section class="section" id="gasto" style="background: white;">
+  <div class="section-header fade-in">
+    <div class="section-num">01</div>
+    <div class="section-info">
+      <div class="section-tool">Flourish · Visualización 1</div>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">Evolución<br>del gasto</h2>
+      <p class="section-question">¿Cómo cambió lo que gasto en alimento a lo largo del tiempo?</p>
+      <p class="section-desc">El precio del alimento se multiplicó casi 90 veces entre 2021 y 2026. La primera compra fue de $1.380 en noviembre 2021 y la última de $123.761 en abril 2026 — un aumento del 8.868%.</p>
     </div>
   </div>
-</section>
-</div>
  
- 
-<div class="bg-1">
-<section>
-  <div class="viz-tool" style="color:#ff7043;">Flourish · Visualización 1</div>
-  <h2>Evolución del gasto 📈</h2>
-  <p class="pregunta">¿Cómo cambió lo que gasto en alimento a lo largo del tiempo?</p>
-  <div class="sep" style="background:#ff7043;"></div>
-  <p class="subtexto">El precio del alimento para gatos se multiplicó casi 90 veces entre 2021 y 2026 — la primera compra fue de $1.380 en noviembre 2021 y la última de $123.761 en abril 2026, un aumento del 8.868%. Este gráfico muestra esa evolución mes a mes, con datos que registré de cada compra en Mercado Libre.</p>
- 
-  <div class="viz-card">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/28688132">
-      <script src="https://public.flourish.studio/resources/embed.js"></script>
-      <noscript><img src="https://public.flourish.studio/visualisation/28688132/thumbnail" width="100%" alt="chart visualization"></noscript>
-    </div>
-    <p class="viz-nota">📌 Fuente: registro personal de compras en Mercado Libre (2021–2026).</p>
-  </div>
-</section>
-</div>
- 
- 
-<div class="bg-2">
-<section>
-  <div class="viz-tool" style="color:#ffb74d;">RAWGraphs · Visualización 2 (próximamente)</div>
-  <h2>Línea de tiempo 🗓️</h2>
-  <p class="pregunta">¿Cuándo llegó cada gato a mi vida?</p>
-  <div class="sep" style="background:#ffb74d;"></div>
-  <p class="subtexto">En la entrega final voy a incluir un gráfico de línea de tiempo hecho en RAWGraphs.
-  Por ahora, acá va la historia contada de forma narrativa:</p>
- 
-  <div class="viz-card">
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-fecha">Noviembre 2021</div>
-        <div class="tl-titulo">🐱 Llegan Isi y Micky</div>
-        <div class="tl-desc">Dos gatitos rescatados de 3 semanas. Primera compra: leche maternidad KMR + jeringa médica. El caos empieza.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-fecha">Octubre 2022</div>
-        <div class="tl-titulo">🐣 Nacen Kendra y Ron</div>
-        <div class="tl-desc">Isi tuvo sus gatitos en casa. La familia se duplicó de un día para el otro.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-fecha">Abril – Junio 2023</div>
-        <div class="tl-titulo">✂️ Castraciones</div>
-        <div class="tl-desc">Ron en abril ($55.000) y Kendra en junio ($75.000). La familia queda completa y estabilizada.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-fecha">2021 → 2026</div>
-        <div class="tl-titulo">📈 La inflación felina</div>
-        <div class="tl-desc">El alimento pasó de $1.380 en nov-2021 a $123.761 en abr-2026 — casi 90 veces más en 4 años (+8.868%).</div>
+  <div class="viz-container fade-in">
+    <div class="viz-inner">
+      <div class="flourish-embed flourish-chart" data-src="visualisation/28688132">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/28688132/thumbnail" width="100%" alt="chart visualization"></noscript>
       </div>
     </div>
+    <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026)</div>
   </div>
 </section>
-</div>
  
+<!-- VIZ 2: TIMELINE -->
+<section class="section" id="timeline">
+  <div class="section-header fade-in">
+    <div class="section-num">02</div>
+    <div class="section-info">
+      <div class="section-tool">RAWGraphs · Visualización 2</div>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">Línea de<br>tiempo</h2>
+      <p class="section-question">¿Cuándo llegó cada gato a mi vida?</p>
+      <p class="section-desc">Cuatro años de historia felina, desde los primeros rescates hasta la inflación más impensada.</p>
+    </div>
+  </div>
  
-<div class="bg-1">
-<section>
-  <div class="viz-tool" style="color:#42a5f5;">DataWrapper · Visualización 3</div>
-  <h2>Gastos por categoría 🥧</h2>
-  <p class="pregunta">¿En qué gasto más: alimento, veterinaria o accesorios?</p>
-  <div class="sep" style="background:#42a5f5;"></div>
+  <div class="viz-container fade-in">
+    <div class="viz-inner" style="padding:40px; text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+      <div style="font-size:0.7rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">📌 REEMPLAZÁ ESTE BLOQUE CON TU EMBED DE RAWGRAPHS</div>
+      <div style="font-size:0.82rem; color:var(--ink-muted); max-width:400px; line-height:1.7;">
+        En RAWGraphs exportá el gráfico → Share → copiá el código embed.<br>
+        Pegalo acá reemplazando todo este <code style="background:var(--stone); padding:2px 6px; border-radius:3px; font-size:0.75rem;">div.viz-inner</code>
+      </div>
+      <div style="border:1.5px dashed var(--line); border-radius:4px; padding:16px 32px; font-size:0.78rem; color:var(--rust); font-weight:500;">
+        RAWGraphs · Mapa de calor de gastos mensuales
+      </div>
+    </div>
+    <div class="viz-source">Fuente: registro personal consolidado (2021–2026)</div>
+  </div>
  
-  <div class="viz-card">
-    <iframe title="¿En qué gasto más: alimento, veterinaria o accesorios? " aria-label="Donut Chart" id="datawrapper-chart-VE2tE" src="https://datawrapper.dwcdn.net/VE2tE/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="559" data-external="1"></iframe>
-    <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-    <p class="viz-nota">📌 Fuente: registro personal de gastos (2021–2026). Total: $3.157.298.</p>
+  <div class="timeline fade-in" style="margin-top:32px;">
+    <div class="tl-item">
+      <div class="tl-year">Noviembre 2021</div>
+      <div class="tl-dot"></div>
+      <div class="tl-title">Llegan Isi y Micky</div>
+      <p class="tl-desc">Dos gatitos rescatados de 3 semanas. Primera compra: leche maternidad KMR. El caos empieza.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">Octubre 2022</div>
+      <div class="tl-dot"></div>
+      <div class="tl-title">Nacen Kendra y Ron</div>
+      <p class="tl-desc">Isi tuvo sus gatitos en casa. La familia se duplicó de un día para el otro.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">Abril – Junio 2023</div>
+      <div class="tl-dot"></div>
+      <div class="tl-title">Las castraciones</div>
+      <p class="tl-desc">Ron en abril ($55.000) y Kendra en junio ($75.000). La familia queda completa y estabilizada.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2021 → 2026</div>
+      <div class="tl-dot"></div>
+      <div class="tl-title">La inflación felina</div>
+      <p class="tl-desc">El alimento pasó de $1.380 a $123.761. Casi 90 veces más en 4 años.</p>
+    </div>
   </div>
 </section>
-</div>
  
+<!-- VIZ 3: GASTO POR AÑO -->
+<section class="section" id="por-anio">
+  <div class="section-header fade-in">
+    <div class="section-num">03</div>
+    <div class="section-info">
+      <div class="section-tool">HTML · Visualización interactiva</div>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">La inflación<br>felina</h2>
+      <p class="section-question">¿Cuánto gasté cada año y cómo explotó el costo?</p>
+      <p class="section-desc">De $2.580 en 2021 a $657.874 en 2025. En cuatro años el gasto anual se multiplicó más de 250 veces, empujado por la inflación argentina y el crecimiento de la familia.</p>
+    </div>
+  </div>
  
-<div class="bg-2">
-<section>
-  <div class="viz-tool" style="color:#ab47bc;">Tableau · Visualización 4 (próximamente)</div>
-  <h2>Marcas de alimento 🛒</h2>
-  <p class="pregunta">¿Qué marcas usé y cuánto gasté en cada una?</p>
-  <div class="sep" style="background:#ab47bc;"></div>
- 
-  <div class="coming-soon">
-    <span>📉</span>
-    <strong>Próximamente en la entrega final (09/05)</strong><br>
-    Dashboard interactivo con evolución por marca a lo largo del tiempo.
+  <div class="viz-container fade-in">
+    <div class="viz-inner" style="padding: 40px 40px 24px;">
+      <div id="year-chart" style="display:flex; align-items:flex-end; gap:0; height:220px; border-bottom: 1px solid var(--line); position:relative;">
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label">$2.580</div>
+          <div class="year-bar" style="height:1%; background:var(--stone);"></div>
+          <div class="year-bar-year">2021</div>
+        </div>
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label">$215.936</div>
+          <div class="year-bar" style="height:33%; background:var(--rust-light);"></div>
+          <div class="year-bar-year">2022</div>
+        </div>
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label">$171.511</div>
+          <div class="year-bar" style="height:26%;background:var(--rust-light);"></div>
+          <div class="year-bar-year">2023</div>
+        </div>
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label">$346.565</div>
+          <div class="year-bar" style="height:53%;background:var(--rust-warm);"></div>
+          <div class="year-bar-year">2024</div>
+        </div>
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label" style="color:var(--rust);">$657.874</div>
+          <div class="year-bar" style="height:100%;background:var(--rust);"></div>
+          <div class="year-bar-year" style="font-weight:500; color:var(--rust);">2025</div>
+        </div>
+        <div class="year-bar-wrap" style="flex:1;">
+          <div class="year-bar-label">$412.857</div>
+          <div class="year-bar" style="height:63%;background:var(--amber);"></div>
+          <div class="year-bar-year">2026 <span style="font-size:0.6rem; color:var(--ink-muted);">parcial</span></div>
+        </div>
+      </div>
+      <div style="margin-top:20px; font-size:0.78rem; color:var(--ink-muted); display:flex; gap:24px; flex-wrap:wrap;">
+        <span><span style="display:inline-block; width:10px; height:10px; background:var(--stone); border-radius:2px; margin-right:5px;"></span>Arranque (solo 2 meses)</span>
+        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust-light); border-radius:2px; margin-right:5px;"></span>Crecimiento</span>
+        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust-warm); border-radius:2px; margin-right:5px;"></span>Aceleración</span>
+        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust); border-radius:2px; margin-right:5px;"></span>Pico</span>
+        <span><span style="display:inline-block; width:10px; height:10px; background:var(--amber); border-radius:2px; margin-right:5px;"></span>2026 (ene–abr)</span>
+      </div>
+    </div>
+    <div class="viz-source">Fuente: registro personal consolidado (2021–2026)</div>
   </div>
 </section>
-</div>
  
+<!-- VIZ 4: CATEGORIAS CON ILUSTRACIONES -->
+<section class="section" id="categorias" style="background: white;">
+  <div class="section-header fade-in">
+    <div class="section-num">04</div>
+    <div class="section-info">
+      <div class="section-tool">DataWrapper · Visualización 3</div>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">Gastos por<br>categoría</h2>
+      <p class="section-question">¿En qué gasto más: alimento, veterinaria o accesorios?</p>
+      <p class="section-desc">Un desglose del total de $3.157.298 gastados entre 2021 y 2026. El alimento domina, pero la higiene y la veterinaria juntas casi lo igualan.</p>
+    </div>
+  </div>
  
+  <!-- Tarjetas ilustradas -->
+  <div class="cat-spending-grid fade-in">
+ 
+    <div class="cat-spend-card">
+      <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
+        <ellipse cx="32" cy="52" rx="20" ry="6" fill="#FFF0F0" stroke="#D48888" stroke-width="0.9"/>
+        <path d="M12 52 Q12 32 32 32 Q52 32 52 52" fill="#FFF8F8" stroke="#D48888" stroke-width="0.9"/>
+        <ellipse cx="32" cy="32" rx="20" ry="6" fill="#FFF0F0" stroke="#D48888" stroke-width="0.9"/>
+        <ellipse cx="32" cy="18" rx="11" ry="4" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
+        <rect x="27" y="14" width="10" height="6" rx="1" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
+        <path d="M22 42 Q32 47 42 42" stroke="#D48888" stroke-width="0.9" fill="none" opacity="0.5"/>
+      </svg>
+      <div class="spend-pct">47%</div>
+      <div class="spend-name">Alimento</div>
+      <div class="spend-total">$1.491.241</div>
+    </div>
+ 
+    <div class="cat-spend-card">
+      <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
+        <rect x="26" y="8" width="12" height="32" rx="6" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
+        <rect x="28" y="38" width="8" height="12" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
+        <rect x="22" y="49" width="20" height="7" rx="3" fill="#FFF0F0" stroke="#C8A068" stroke-width="0.9"/>
+        <circle cx="32" cy="22" r="5" fill="#FFF0F0" stroke="#C8A068" stroke-width="0.8"/>
+        <path d="M38 10 Q46 5 48 13" stroke="#C8A068" stroke-width="0.9" fill="none"/>
+        <circle cx="48" cy="13" r="2.5" fill="#C8A068" opacity="0.7"/>
+        <line x1="16" y1="22" x2="26" y2="22" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+        <line x1="16" y1="26" x2="26" y2="26" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+      </svg>
+      <div class="spend-pct">24%</div>
+      <div class="spend-name">Veterinaria</div>
+      <div class="spend-total">$754.664</div>
+    </div>
+ 
+    <div class="cat-spend-card">
+      <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
+        <rect x="18" y="20" width="28" height="36" rx="6" fill="#FFF0F8" stroke="#C8A068" stroke-width="0.9"/>
+        <rect x="24" y="12" width="16" height="12" rx="4" fill="#FFF0F8" stroke="#C8A068" stroke-width="0.9"/>
+        <ellipse cx="32" cy="24" rx="10" ry="3" fill="#E4D7F5" stroke="#C8A068" stroke-width="0.7"/>
+        <line x1="26" y1="36" x2="38" y2="36" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+        <line x1="26" y1="42" x2="36" y2="42" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+        <line x1="26" y1="48" x2="34" y2="48" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+      </svg>
+      <div class="spend-pct">23%</div>
+      <div class="spend-name">Higiene</div>
+      <div class="spend-total">$730.163</div>
+    </div>
+ 
+    <div class="cat-spend-card">
+      <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
+        <ellipse cx="32" cy="46" rx="18" ry="6" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.9"/>
+        <rect x="14" y="28" width="36" height="18" rx="4" fill="#FFF5F0" stroke="#AA9080" stroke-width="0.9"/>
+        <ellipse cx="32" cy="28" rx="18" ry="5" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.9"/>
+        <line x1="32" y1="23" x2="32" y2="14" stroke="#AA9080" stroke-width="0.9"/>
+        <ellipse cx="32" cy="14" rx="7" ry="3.5" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.8"/>
+        <circle cx="23" cy="38" r="4" fill="white" stroke="#AA9080" stroke-width="0.8"/>
+        <circle cx="41" cy="38" r="4" fill="white" stroke="#AA9080" stroke-width="0.8"/>
+      </svg>
+      <div class="spend-pct">4.5%</div>
+      <div class="spend-name">Accesorios</div>
+      <div class="spend-total">$142.100</div>
+    </div>
+ 
+    <div class="cat-spend-card">
+      <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
+        <circle cx="32" cy="32" r="18" fill="#F1EFE8" stroke="#888780" stroke-width="0.9"/>
+        <circle cx="32" cy="32" r="11" fill="none" stroke="#888780" stroke-width="0.7" opacity="0.5"/>
+        <text x="32" y="37" text-anchor="middle" font-size="16" fill="#5F5E5A" font-family="DM Sans,sans-serif">?</text>
+      </svg>
+      <div class="spend-pct">1.2%</div>
+      <div class="spend-name">Otro</div>
+      <div class="spend-total">$39.130</div>
+    </div>
+ 
+  </div>
+ 
+  <!-- Desglose veterinaria -->
+  <div style="margin-top: 40px;" class="fade-in">
+    <div style="font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:20px;">Desglose de veterinaria · $754.664 en total</div>
+    <div class="vet-breakdown">
+ 
+      <div class="vet-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
+          <circle cx="24" cy="24" r="16" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
+          <path d="M20 20 L28 20 M24 16 L24 24" stroke="#C8A068" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="24" cy="30" r="2" fill="#C8A068"/>
+        </svg>
+        <div class="vet-info">
+          <div class="vet-name">Vacunas anuales</div>
+          <div class="vet-bar-wrap">
+            <div class="vet-bar" style="width:100%; background:var(--amber);"></div>
+          </div>
+          <div class="vet-amount">$346.000 · 46%</div>
+        </div>
+      </div>
+ 
+      <div class="vet-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
+          <circle cx="24" cy="24" r="16" fill="#FFF8F8" stroke="#D48888" stroke-width="0.9"/>
+          <rect x="19" y="14" width="10" height="20" rx="3" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
+          <rect x="21" y="11" width="6" height="5" rx="1" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
+          <rect x="21" y="30" width="6" height="4" rx="1" fill="#FFF0F0" stroke="#D48888" stroke-width="0.7"/>
+        </svg>
+        <div class="vet-info">
+          <div class="vet-name">Consultas veterinarias</div>
+          <div class="vet-bar-wrap">
+            <div class="vet-bar" style="width:69%; background:var(--rust-warm);"></div>
+          </div>
+          <div class="vet-amount">$240.000 · 32%</div>
+        </div>
+      </div>
+ 
+      <div class="vet-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
+          <circle cx="24" cy="24" r="16" fill="#FAF0EB" stroke="#CC7878" stroke-width="0.9"/>
+          <path d="M16 24 Q20 16 24 18 Q28 20 32 24" stroke="#CC7878" stroke-width="1" fill="none"/>
+          <line x1="24" y1="18" x2="24" y2="32" stroke="#CC7878" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="24" cy="32" r="2.5" fill="#CC7878" opacity="0.6"/>
+        </svg>
+        <div class="vet-info">
+          <div class="vet-name">Castraciones (Ron + Kendra)</div>
+          <div class="vet-bar-wrap">
+            <div class="vet-bar" style="width:48%; background:var(--rust);"></div>
+          </div>
+          <div class="vet-amount">$165.000 · 22%</div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+ 
+  <div class="viz-container fade-in" style="margin-top:40px;">
+    <div class="viz-inner">
+      <iframe title="¿En qué gasto más: alimento, veterinaria o accesorios?" aria-label="Donut Chart" id="datawrapper-chart-VE2tE" src="https://datawrapper.dwcdn.net/VE2tE/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="559" data-external="1"></iframe>
+      <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+    </div>
+    <div class="viz-source">Fuente: registro personal de gastos (2021–2026) · Total: $3.157.298</div>
+  </div>
+</section>
+ 
+<!-- VIZ 5: MARCAS -->
+<section class="section" id="marcas">
+  <div class="section-header fade-in">
+    <div class="section-num">05</div>
+    <div class="section-info">
+      <div class="section-tool">Tableau · Visualización 4</div>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">Marcas<br>de alimento</h2>
+      <p class="section-question">¿Qué marcas usé y cuánto gasté en cada una?</p>
+      <p class="section-desc">Dashboard interactivo con evolución por marca a lo largo del tiempo.</p>
+    </div>
+  </div>
+ 
+  <div class="viz-container fade-in">
+    <div class="viz-inner" style="padding:40px; text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+      <div style="font-size:0.7rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">📌 REEMPLAZÁ ESTE BLOQUE CON TU EMBED DE TABLEAU</div>
+      <div style="font-size:0.82rem; color:var(--ink-muted); max-width:400px; line-height:1.7;">
+        En Tableau Public publicá la viz → Share → copiá el código embed.<br>
+        Pegalo acá reemplazando todo este <code style="background:var(--stone); padding:2px 6px; border-radius:3px; font-size:0.75rem;">div.viz-inner</code>
+      </div>
+      <div style="border:1.5px dashed var(--line); border-radius:4px; padding:16px 32px; font-size:0.78rem; color:var(--rust); font-weight:500;">
+        Tableau · Precio por marca en el tiempo (2021–2026)
+      </div>
+    </div>
+    <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026)</div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
 <footer>
-  <strong>Mis gatos en datos 🐾</strong><br>
-  Ailin Gomez Romay · Maestría en Ciencia de Datos<br>
-  Visualización de Datos Personales · ECD 2025.B<br>
-  Datos recolectados personalmente desde noviembre de 2021.
+  <div class="footer-left">
+    <div class="footer-title">Mis gatos en datos</div>
+    <p class="footer-subtitle">
+      Un proyecto de visualización de datos personales sobre cuatro años<br>
+      de amor felino — y su impacto en la billetera.<br>
+      <span style="color:var(--rust-warm); font-style:italic;">Hecho con datos, café y muchas patitas encima del teclado.</span>
+    </p>
+  </div>
+  <div class="footer-right">
+    <div class="footer-paw">🐾</div>
+    <div class="footer-credit">
+      Ailin Gomez Romay<br>
+      Maestría en Ciencia de Datos<br>
+      Visualización de Datos Personales · ECD 2025.B<br>
+      Datos recolectados personalmente · Nov 2021 – Abr 2026
+    </div>
+  </div>
 </footer>
+ 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+ 
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
  
 </body>
 </html>
- 
