@@ -783,6 +783,26 @@
       .cat-cover-photo { height: 200px; }
     }
  
+    /* ─── VIZ SECTION DECORATIONS ─── */
+    .viz-section-alt {
+      background: var(--rust-pale);
+    }
+    .viz-bg-deco {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    .section {
+      position: relative;
+      overflow: hidden;
+    }
+    .section > *:not(.viz-bg-deco) {
+      position: relative;
+      z-index: 1;
+    }
+ 
     /* ─── PAW SEPARATOR ─── */
     .paw-separator {
       display: flex;
@@ -1099,8 +1119,10 @@
   <div class="paw-sep-line"></div>
 </div>
  
-<!-- VIZ 1: GASTO -->
-<section class="section" id="gasto" style="background: white;">
+<!-- VIZ 1: FLOURISH -->
+<section class="section viz-section-alt" id="gasto">
+  <div class="viz-bg-deco" style="top:20px; right:40px; font-size:120px; transform:rotate(15deg);">🐾</div>
+  <div class="viz-bg-deco" style="bottom:20px; left:20px; font-size:80px; transform:rotate(-10deg);">🐾</div>
   <div class="section-header fade-in">
     <div class="section-num">01</div>
     <div class="section-info">
@@ -1111,7 +1133,6 @@
       <p class="section-desc">El precio del alimento se multiplicó casi 90 veces entre 2021 y 2026. La primera compra fue de $1.380 en noviembre 2021 y la última de $123.761 en abril 2026 — un aumento del 8.868%.</p>
     </div>
   </div>
- 
   <div class="viz-container fade-in">
     <div class="viz-inner">
       <div class="flourish-embed flourish-chart" data-src="visualisation/28688132">
@@ -1123,28 +1144,29 @@
   </div>
 </section>
  
- 
 <div class="paw-separator">
   <div class="paw-sep-line"></div>
   <div class="paw-sep-icon">🐾 🐾 🐾</div>
   <div class="paw-sep-line"></div>
 </div>
  
-<!-- VIZ 2: TIMELINE -->
-<section class="section" id="timeline">
+<!-- VIZ 2: RAWGRAPHS -->
+<section class="section" id="rawgraphs" style="background:white;">
+  <div class="viz-bg-deco" style="top:30px; right:60px; font-size:100px; transform:rotate(-8deg); opacity:0.03;">
+    <svg width="100" height="100" viewBox="0 0 100 100"><ellipse cx="50" cy="70" rx="30" ry="8" fill="#CC7878"/><path d="M20 70 Q20 40 50 40 Q80 40 80 70" fill="#FFF0F0" stroke="#CC7878" stroke-width="1.5"/><ellipse cx="50" cy="40" rx="30" ry="8" fill="#F5D8D8" stroke="#CC7878" stroke-width="1.5"/></svg>
+  </div>
   <div class="section-header fade-in">
     <div class="section-num">02</div>
     <div class="section-info">
       <div class="section-tool">RAWGraphs · Visualización 2</div>
       <div class="accent-bar"></div>
-      <h2 class="section-title">Línea de<br>tiempo</h2>
-      <p class="section-question">¿Cuándo llegó cada gato a mi vida?</p>
-      <p class="section-desc">Cuatro años de historia felina, desde los primeros rescates hasta la inflación más impensada.</p>
+      <h2 class="section-title">Gasto mensual<br>por año</h2>
+      <p class="section-question">¿En qué meses gasté más a lo largo de los años?</p>
+      <p class="section-desc">Un mapa de calor que muestra la intensidad del gasto mes a mes desde 2021 hasta 2026. Los picos coinciden con vacunas anuales, castraciones y aumentos de precio.</p>
     </div>
   </div>
- 
   <div class="viz-container fade-in">
-    <div class="viz-inner" style="padding:40px; text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+    <div class="viz-inner" style="text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
       <div style="font-size:0.7rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">📌 REEMPLAZÁ ESTE BLOQUE CON TU EMBED DE RAWGRAPHS</div>
       <div style="font-size:0.82rem; color:var(--ink-muted); max-width:400px; line-height:1.7;">
         En RAWGraphs exportá el gráfico → Share → copiá el código embed.<br>
@@ -1154,37 +1176,9 @@
         RAWGraphs · Mapa de calor de gastos mensuales
       </div>
     </div>
-    <div class="viz-source">Fuente: registro personal consolidado (2021–2026)</div>
-  </div>
- 
-  <div class="timeline fade-in" style="margin-top:32px;">
-    <div class="tl-item">
-      <div class="tl-year">Noviembre 2021</div>
-      <div class="tl-dot"></div>
-      <div class="tl-title">Llegan Isi y Micky</div>
-      <p class="tl-desc">Dos gatitos rescatados de 3 semanas. Primera compra: leche maternidad KMR. El caos empieza.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">Octubre 2022</div>
-      <div class="tl-dot"></div>
-      <div class="tl-title">Nacen Kendra y Ron</div>
-      <p class="tl-desc">Isi tuvo sus gatitos en casa. La familia se duplicó de un día para el otro.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">Abril – Junio 2023</div>
-      <div class="tl-dot"></div>
-      <div class="tl-title">Las castraciones</div>
-      <p class="tl-desc">Ron en abril ($55.000) y Kendra en junio ($75.000). La familia queda completa y estabilizada.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">2021 → 2026</div>
-      <div class="tl-dot"></div>
-      <div class="tl-title">La inflación felina</div>
-      <p class="tl-desc">El alimento pasó de $1.380 a $123.761. Casi 90 veces más en 4 años.</p>
-    </div>
+    <div class="viz-source">Fuente: registro personal consolidado (2021–2026) · CSV: rawgraphs_heatmap.csv</div>
   </div>
 </section>
- 
  
 <div class="paw-separator">
   <div class="paw-sep-line"></div>
@@ -1192,108 +1186,44 @@
   <div class="paw-sep-line"></div>
 </div>
  
-<!-- VIZ 3: GASTO POR AÑO -->
-<section class="section" id="por-anio">
+<!-- VIZ 3: DATAWRAPPER -->
+<section class="section viz-section-alt" id="categorias">
+  <div class="viz-bg-deco" style="bottom:30px; right:30px; font-size:110px; transform:rotate(20deg);">
+    <svg width="90" height="90" viewBox="0 0 90 90" opacity="0.06"><ellipse cx="45" cy="65" rx="25" ry="7" fill="#CC7878"/><path d="M20 65 Q20 35 45 35 Q70 35 70 65" fill="#FFF0F0" stroke="#CC7878" stroke-width="1.5"/><ellipse cx="45" cy="35" rx="25" ry="7" fill="#F5D8D8" stroke="#CC7878" stroke-width="1.5"/><ellipse cx="45" cy="20" rx="12" ry="4" fill="#FFF0F0" stroke="#CC7878" stroke-width="1.2"/><rect x="40" y="16" width="10" height="6" fill="#FFF0F0" stroke="#CC7878" stroke-width="1"/></svg>
+  </div>
+  <div class="viz-bg-deco" style="top:40px; left:30px; font-size:60px; transform:rotate(-15deg); opacity:0.04;">🐾</div>
   <div class="section-header fade-in">
     <div class="section-num">03</div>
-    <div class="section-info">
-      <div class="section-tool">HTML · Visualización interactiva</div>
-      <div class="accent-bar"></div>
-      <h2 class="section-title">La inflación<br>felina</h2>
-      <p class="section-question">¿Cuánto gasté cada año y cómo explotó el costo?</p>
-      <p class="section-desc">De $2.580 en 2021 a $657.874 en 2025. En cuatro años el gasto anual se multiplicó más de 250 veces, empujado por la inflación argentina y el crecimiento de la familia.</p>
-    </div>
-  </div>
- 
-  <div class="viz-container fade-in">
-    <div class="viz-inner" style="padding: 40px 40px 24px;">
-      <div id="year-chart" style="display:flex; align-items:flex-end; gap:0; height:220px; border-bottom: 1px solid var(--line); position:relative;">
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label">$2.580</div>
-          <div class="year-bar" style="height:1%; background:var(--stone);"></div>
-          <div class="year-bar-year">2021</div>
-        </div>
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label">$215.936</div>
-          <div class="year-bar" style="height:33%; background:var(--rust-light);"></div>
-          <div class="year-bar-year">2022</div>
-        </div>
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label">$171.511</div>
-          <div class="year-bar" style="height:26%;background:var(--rust-light);"></div>
-          <div class="year-bar-year">2023</div>
-        </div>
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label">$346.565</div>
-          <div class="year-bar" style="height:53%;background:var(--rust-warm);"></div>
-          <div class="year-bar-year">2024</div>
-        </div>
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label" style="color:var(--rust);">$657.874</div>
-          <div class="year-bar" style="height:100%;background:var(--rust);"></div>
-          <div class="year-bar-year" style="font-weight:500; color:var(--rust);">2025</div>
-        </div>
-        <div class="year-bar-wrap" style="flex:1;">
-          <div class="year-bar-label">$412.857</div>
-          <div class="year-bar" style="height:63%;background:var(--amber);"></div>
-          <div class="year-bar-year">2026 <span style="font-size:0.6rem; color:var(--ink-muted);">parcial</span></div>
-        </div>
-      </div>
-      <div style="margin-top:20px; font-size:0.78rem; color:var(--ink-muted); display:flex; gap:24px; flex-wrap:wrap;">
-        <span><span style="display:inline-block; width:10px; height:10px; background:var(--stone); border-radius:2px; margin-right:5px;"></span>Arranque (solo 2 meses)</span>
-        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust-light); border-radius:2px; margin-right:5px;"></span>Crecimiento</span>
-        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust-warm); border-radius:2px; margin-right:5px;"></span>Aceleración</span>
-        <span><span style="display:inline-block; width:10px; height:10px; background:var(--rust); border-radius:2px; margin-right:5px;"></span>Pico</span>
-        <span><span style="display:inline-block; width:10px; height:10px; background:var(--amber); border-radius:2px; margin-right:5px;"></span>2026 (ene–abr)</span>
-      </div>
-    </div>
-    <div class="viz-source">Fuente: registro personal consolidado (2021–2026)</div>
-  </div>
-</section>
- 
- 
-<div class="paw-separator">
-  <div class="paw-sep-line"></div>
-  <div class="paw-sep-icon">🐾 🐾 🐾</div>
-  <div class="paw-sep-line"></div>
-</div>
- 
-<!-- VIZ 4: CATEGORIAS CON ILUSTRACIONES -->
-<section class="section" id="categorias" style="background: white;">
-  <div class="section-header fade-in">
-    <div class="section-num">04</div>
     <div class="section-info">
       <div class="section-tool">DataWrapper · Visualización 3</div>
       <div class="accent-bar"></div>
       <h2 class="section-title">Gastos por<br>categoría</h2>
-      <p class="section-question">¿En qué gasto más: alimento, veterinaria o accesorios?</p>
-      <p class="section-desc">Un desglose del total de $3.157.298 gastados entre 2021 y 2026. El alimento domina, pero la higiene y la veterinaria juntas casi lo igualan.</p>
+      <p class="section-question">¿En qué gasto más: alimento, veterinaria o higiene?</p>
+      <p class="section-desc">Un desglose del total de $3.157.298 gastados entre 2021 y 2026. El alimento domina con el 47%, pero la higiene y la veterinaria juntas casi lo igualan.</p>
     </div>
   </div>
  
   <!-- Tarjetas ilustradas -->
   <div class="cat-spending-grid fade-in">
- 
     <div class="cat-spend-card">
       <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
-        <ellipse cx="32" cy="52" rx="20" ry="6" fill="#FFF0F0" stroke="#D48888" stroke-width="0.9"/>
-        <path d="M12 52 Q12 32 32 32 Q52 32 52 52" fill="#FFF8F8" stroke="#D48888" stroke-width="0.9"/>
-        <ellipse cx="32" cy="32" rx="20" ry="6" fill="#FFF0F0" stroke="#D48888" stroke-width="0.9"/>
-        <ellipse cx="32" cy="18" rx="11" ry="4" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
-        <rect x="27" y="14" width="10" height="6" rx="1" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
+        <ellipse cx="32" cy="52" rx="20" ry="6" fill="#FAE5D5" stroke="#D48888" stroke-width="0.9"/>
+        <path d="M12 52 Q12 32 32 32 Q52 32 52 52" fill="#FFF0F0" stroke="#D48888" stroke-width="0.9"/>
+        <ellipse cx="32" cy="32" rx="20" ry="6" fill="#FAE5D5" stroke="#D48888" stroke-width="0.9"/>
+        <ellipse cx="32" cy="18" rx="11" ry="4" fill="#FFF0F0" stroke="#D48888" stroke-width="0.8"/>
+        <rect x="27" y="14" width="10" height="6" rx="1" fill="#FFF0F0" stroke="#D48888" stroke-width="0.8"/>
         <path d="M22 42 Q32 47 42 42" stroke="#D48888" stroke-width="0.9" fill="none" opacity="0.5"/>
       </svg>
       <div class="spend-pct">47%</div>
       <div class="spend-name">Alimento</div>
       <div class="spend-total">$1.491.241</div>
     </div>
- 
     <div class="cat-spend-card">
       <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
         <rect x="26" y="8" width="12" height="32" rx="6" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
         <rect x="28" y="38" width="8" height="12" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
-        <rect x="22" y="49" width="20" height="7" rx="3" fill="#FFF0F0" stroke="#C8A068" stroke-width="0.9"/>
-        <circle cx="32" cy="22" r="5" fill="#FFF0F0" stroke="#C8A068" stroke-width="0.8"/>
+        <rect x="22" y="49" width="20" height="7" rx="3" fill="#F5E8D5" stroke="#C8A068" stroke-width="0.9"/>
+        <circle cx="32" cy="22" r="5" fill="#F5E8D5" stroke="#C8A068" stroke-width="0.8"/>
         <path d="M38 10 Q46 5 48 13" stroke="#C8A068" stroke-width="0.9" fill="none"/>
         <circle cx="48" cy="13" r="2.5" fill="#C8A068" opacity="0.7"/>
         <line x1="16" y1="22" x2="26" y2="22" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
@@ -1303,54 +1233,49 @@
       <div class="spend-name">Veterinaria</div>
       <div class="spend-total">$754.664</div>
     </div>
- 
     <div class="cat-spend-card">
       <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
-        <rect x="18" y="20" width="28" height="36" rx="6" fill="#FFF0F8" stroke="#C8A068" stroke-width="0.9"/>
-        <rect x="24" y="12" width="16" height="12" rx="4" fill="#FFF0F8" stroke="#C8A068" stroke-width="0.9"/>
-        <ellipse cx="32" cy="24" rx="10" ry="3" fill="#E4D7F5" stroke="#C8A068" stroke-width="0.7"/>
-        <line x1="26" y1="36" x2="38" y2="36" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
-        <line x1="26" y1="42" x2="36" y2="42" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
-        <line x1="26" y1="48" x2="34" y2="48" stroke="#C8A068" stroke-width="0.8" opacity="0.5"/>
+        <rect x="18" y="20" width="28" height="36" rx="6" fill="#FFF8F8" stroke="#CC7878" stroke-width="0.9"/>
+        <rect x="24" y="12" width="16" height="12" rx="4" fill="#FFF8F8" stroke="#CC7878" stroke-width="0.9"/>
+        <ellipse cx="32" cy="24" rx="10" ry="3" fill="#F5D8D8" stroke="#CC7878" stroke-width="0.7"/>
+        <line x1="26" y1="36" x2="38" y2="36" stroke="#CC7878" stroke-width="0.8" opacity="0.5"/>
+        <line x1="26" y1="42" x2="36" y2="42" stroke="#CC7878" stroke-width="0.8" opacity="0.5"/>
+        <line x1="26" y1="48" x2="34" y2="48" stroke="#CC7878" stroke-width="0.8" opacity="0.5"/>
       </svg>
       <div class="spend-pct">23%</div>
       <div class="spend-name">Higiene</div>
       <div class="spend-total">$730.163</div>
     </div>
- 
     <div class="cat-spend-card">
       <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
-        <ellipse cx="32" cy="46" rx="18" ry="6" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.9"/>
-        <rect x="14" y="28" width="36" height="18" rx="4" fill="#FFF5F0" stroke="#AA9080" stroke-width="0.9"/>
-        <ellipse cx="32" cy="28" rx="18" ry="5" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.9"/>
-        <line x1="32" y1="23" x2="32" y2="14" stroke="#AA9080" stroke-width="0.9"/>
-        <ellipse cx="32" cy="14" rx="7" ry="3.5" fill="#F5D8D8" stroke="#AA9080" stroke-width="0.8"/>
-        <circle cx="23" cy="38" r="4" fill="white" stroke="#AA9080" stroke-width="0.8"/>
-        <circle cx="41" cy="38" r="4" fill="white" stroke="#AA9080" stroke-width="0.8"/>
+        <ellipse cx="32" cy="46" rx="18" ry="6" fill="#F5E8D5" stroke="#C8A068" stroke-width="0.9"/>
+        <rect x="14" y="28" width="36" height="18" rx="4" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
+        <ellipse cx="32" cy="28" rx="18" ry="5" fill="#F5E8D5" stroke="#C8A068" stroke-width="0.9"/>
+        <line x1="32" y1="23" x2="32" y2="14" stroke="#C8A068" stroke-width="0.9"/>
+        <ellipse cx="32" cy="14" rx="7" ry="3.5" fill="#F5E8D5" stroke="#C8A068" stroke-width="0.8"/>
+        <circle cx="23" cy="38" r="4" fill="white" stroke="#C8A068" stroke-width="0.8"/>
+        <circle cx="41" cy="38" r="4" fill="white" stroke="#C8A068" stroke-width="0.8"/>
       </svg>
       <div class="spend-pct">4.5%</div>
       <div class="spend-name">Accesorios</div>
       <div class="spend-total">$142.100</div>
     </div>
- 
     <div class="cat-spend-card">
       <svg width="64" height="64" viewBox="0 0 64 64" class="spend-icon">
-        <circle cx="32" cy="32" r="18" fill="#F1EFE8" stroke="#888780" stroke-width="0.9"/>
-        <circle cx="32" cy="32" r="11" fill="none" stroke="#888780" stroke-width="0.7" opacity="0.5"/>
-        <text x="32" y="37" text-anchor="middle" font-size="16" fill="#5F5E5A" font-family="DM Sans,sans-serif">?</text>
+        <circle cx="32" cy="32" r="18" fill="#F5EFEF" stroke="#AA8880" stroke-width="0.9"/>
+        <circle cx="32" cy="32" r="11" fill="none" stroke="#AA8880" stroke-width="0.7" opacity="0.5"/>
+        <text x="32" y="37" text-anchor="middle" font-size="16" fill="#AA8880" font-family="DM Sans,sans-serif">?</text>
       </svg>
       <div class="spend-pct">1.2%</div>
       <div class="spend-name">Otro</div>
       <div class="spend-total">$39.130</div>
     </div>
- 
   </div>
  
   <!-- Desglose veterinaria -->
-  <div style="margin-top: 40px;" class="fade-in">
+  <div style="margin-top:40px;" class="fade-in">
     <div style="font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:20px;">Desglose de veterinaria · $754.664 en total</div>
     <div class="vet-breakdown">
- 
       <div class="vet-item">
         <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
           <circle cx="24" cy="24" r="16" fill="#FFFAF5" stroke="#C8A068" stroke-width="0.9"/>
@@ -1359,45 +1284,36 @@
         </svg>
         <div class="vet-info">
           <div class="vet-name">Vacunas anuales</div>
-          <div class="vet-bar-wrap">
-            <div class="vet-bar" style="width:100%; background:var(--amber);"></div>
-          </div>
+          <div class="vet-bar-wrap"><div class="vet-bar" style="width:100%; background:var(--amber);"></div></div>
           <div class="vet-amount">$346.000 · 46%</div>
         </div>
       </div>
- 
       <div class="vet-item">
         <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
-          <circle cx="24" cy="24" r="16" fill="#FFF8F8" stroke="#D48888" stroke-width="0.9"/>
-          <rect x="19" y="14" width="10" height="20" rx="3" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
-          <rect x="21" y="11" width="6" height="5" rx="1" fill="#FFF8F8" stroke="#D48888" stroke-width="0.8"/>
-          <rect x="21" y="30" width="6" height="4" rx="1" fill="#FFF0F0" stroke="#D48888" stroke-width="0.7"/>
+          <circle cx="24" cy="24" r="16" fill="#FFF0F0" stroke="#CC7878" stroke-width="0.9"/>
+          <rect x="19" y="14" width="10" height="20" rx="3" fill="#FFF0F0" stroke="#CC7878" stroke-width="0.8"/>
+          <rect x="21" y="11" width="6" height="5" rx="1" fill="#FFF0F0" stroke="#CC7878" stroke-width="0.8"/>
+          <rect x="21" y="30" width="6" height="4" rx="1" fill="#F5D8D8" stroke="#CC7878" stroke-width="0.7"/>
         </svg>
         <div class="vet-info">
           <div class="vet-name">Consultas veterinarias</div>
-          <div class="vet-bar-wrap">
-            <div class="vet-bar" style="width:69%; background:var(--rust-warm);"></div>
-          </div>
+          <div class="vet-bar-wrap"><div class="vet-bar" style="width:69%; background:var(--rust-warm);"></div></div>
           <div class="vet-amount">$240.000 · 32%</div>
         </div>
       </div>
- 
       <div class="vet-item">
         <svg width="48" height="48" viewBox="0 0 48 48" class="vet-icon">
-          <circle cx="24" cy="24" r="16" fill="#FAF0EB" stroke="#CC7878" stroke-width="0.9"/>
+          <circle cx="24" cy="24" r="16" fill="#FFF8F8" stroke="#CC7878" stroke-width="0.9"/>
           <path d="M16 24 Q20 16 24 18 Q28 20 32 24" stroke="#CC7878" stroke-width="1" fill="none"/>
           <line x1="24" y1="18" x2="24" y2="32" stroke="#CC7878" stroke-width="1.2" stroke-linecap="round"/>
           <circle cx="24" cy="32" r="2.5" fill="#CC7878" opacity="0.6"/>
         </svg>
         <div class="vet-info">
           <div class="vet-name">Castraciones (Ron + Kendra)</div>
-          <div class="vet-bar-wrap">
-            <div class="vet-bar" style="width:48%; background:var(--rust);"></div>
-          </div>
+          <div class="vet-bar-wrap"><div class="vet-bar" style="width:48%; background:var(--rust);"></div></div>
           <div class="vet-amount">$165.000 · 22%</div>
         </div>
       </div>
- 
     </div>
   </div>
  
@@ -1410,28 +1326,30 @@
   </div>
 </section>
  
- 
 <div class="paw-separator">
   <div class="paw-sep-line"></div>
   <div class="paw-sep-icon">🐾 🐾 🐾</div>
   <div class="paw-sep-line"></div>
 </div>
  
-<!-- VIZ 5: MARCAS -->
-<section class="section" id="marcas">
+<!-- VIZ 4: TABLEAU -->
+<section class="section" id="marcas" style="background:white;">
+  <div class="viz-bg-deco" style="top:40px; right:40px; font-size:90px; transform:rotate(10deg); opacity:0.04;">🐾</div>
+  <div class="viz-bg-deco" style="bottom:40px; left:40px; opacity:0.05;">
+    <svg width="80" height="80" viewBox="0 0 80 80"><ellipse cx="40" cy="58" rx="22" ry="6" fill="#C8A068"/><path d="M18 58 Q18 32 40 32 Q62 32 62 58" fill="#FFFAF5" stroke="#C8A068" stroke-width="1.5"/><ellipse cx="40" cy="32" rx="22" ry="6" fill="#F5E8D5" stroke="#C8A068" stroke-width="1.5"/><ellipse cx="40" cy="18" rx="10" ry="4" fill="#FFFAF5" stroke="#C8A068" stroke-width="1.2"/><rect x="35" y="14" width="10" height="6" fill="#FFFAF5" stroke="#C8A068" stroke-width="1"/></svg>
+  </div>
   <div class="section-header fade-in">
-    <div class="section-num">05</div>
+    <div class="section-num">04</div>
     <div class="section-info">
       <div class="section-tool">Tableau · Visualización 4</div>
       <div class="accent-bar"></div>
-      <h2 class="section-title">Marcas<br>de alimento</h2>
-      <p class="section-question">¿Qué marcas usé y cuánto gasté en cada una?</p>
-      <p class="section-desc">Dashboard interactivo con evolución por marca a lo largo del tiempo.</p>
+      <h2 class="section-title">Precio por<br>marca</h2>
+      <p class="section-question">¿Qué marcas usé y cómo subió el precio de cada una?</p>
+      <p class="section-desc">Royal Canin, Vital Can, Purina y Nutrique — cuatro marcas, cuatro historias de inflación. El CSV con los datos ya está listo para subir a Tableau Public.</p>
     </div>
   </div>
- 
   <div class="viz-container fade-in">
-    <div class="viz-inner" style="padding:40px; text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+    <div class="viz-inner" style="text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
       <div style="font-size:0.7rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">📌 REEMPLAZÁ ESTE BLOQUE CON TU EMBED DE TABLEAU</div>
       <div style="font-size:0.82rem; color:var(--ink-muted); max-width:400px; line-height:1.7;">
         En Tableau Public publicá la viz → Share → copiá el código embed.<br>
@@ -1441,7 +1359,7 @@
         Tableau · Precio por marca en el tiempo (2021–2026)
       </div>
     </div>
-    <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026)</div>
+    <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026) · CSV: tableau_marcas.csv</div>
   </div>
 </section>
  
