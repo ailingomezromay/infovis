@@ -1,42 +1,2839 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    #vis.vega-embed {
-      width: 100%;
-      display: flex;
+{
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-07c4cb9e8ed49d77fd3b5b04a018ea00"},
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "color": {
+      "field": "region",
+      "scale": {
+        "domain": [
+          "América del Norte",
+          "América Latina",
+          "Europa",
+          "Asia",
+          "África",
+          "Oceanía",
+          "Medio Oriente"
+        ],
+        "range": [
+          "#e74c3c",
+          "#e67e22",
+          "#3498db",
+          "#2ecc71",
+          "#9b59b6",
+          "#1abc9c",
+          "#f39c12"
+        ]
+      },
+      "title": "Región",
+      "type": "nominal"
+    },
+    "detail": {"field": "pais", "type": "nominal"},
+    "opacity": {"condition": {"param": "param_6", "value": 1}, "value": 0.08},
+    "strokeWidth": {
+      "condition": {"param": "param_6", "value": 2.5},
+      "value": 1
+    },
+    "tooltip": [
+      {"field": "pais", "title": "País", "type": "nominal"},
+      {"field": "year", "title": "Año", "type": "ordinal"},
+      {
+        "field": "co2_per_capita",
+        "format": ".2f",
+        "title": "CO₂ per cápita",
+        "type": "quantitative"
+      },
+      {"field": "region", "title": "Región", "type": "nominal"}
+    ],
+    "x": {"field": "year", "title": "Año", "type": "ordinal"},
+    "y": {
+      "field": "co2_per_capita",
+      "title": "CO₂ per cápita (toneladas)",
+      "type": "quantitative"
     }
-
-    #vis.vega-embed details,
-    #vis.vega-embed details summary {
-      position: relative;
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_6",
+      "select": {"type": "point", "fields": ["region"]},
+      "bind": "legend"
+    },
+    {
+      "name": "param_7",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
     }
-  </style>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-</head>
-<body>
-  <div id="vis"></div>
-  <script>
-    (function(vegaEmbed) {
-      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-07c4cb9e8ed49d77fd3b5b04a018ea00"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "region", "scale": {"domain": ["Am\u00e9rica del Norte", "Am\u00e9rica Latina", "Europa", "Asia", "\u00c1frica", "Ocean\u00eda", "Medio Oriente"], "range": ["#e74c3c", "#e67e22", "#3498db", "#2ecc71", "#9b59b6", "#1abc9c", "#f39c12"]}, "title": "Regi\u00f3n", "type": "nominal"}, "detail": {"field": "pais", "type": "nominal"}, "opacity": {"condition": {"param": "param_10", "value": 1}, "value": 0.08}, "strokeWidth": {"condition": {"param": "param_10", "value": 2.5}, "value": 1}, "tooltip": [{"field": "pais", "title": "Pa\u00eds", "type": "nominal"}, {"field": "year", "title": "A\u00f1o", "type": "ordinal"}, {"field": "co2_per_capita", "format": ".2f", "title": "CO\u2082 per c\u00e1pita", "type": "quantitative"}, {"field": "region", "title": "Regi\u00f3n", "type": "nominal"}], "x": {"field": "year", "title": "A\u00f1o", "type": "ordinal"}, "y": {"field": "co2_per_capita", "title": "CO\u2082 per c\u00e1pita (toneladas)", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_10", "select": {"type": "point", "fields": ["region"]}, "bind": "legend"}, {"name": "param_11", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": {"text": "Emisiones de CO\u2082 per c\u00e1pita por pa\u00eds (2000\u20132022)", "fontSize": 15, "subtitle": "Click en la leyenda para resaltar una regi\u00f3n \u00b7 Scroll para hacer zoom", "subtitleFontSize": 11}, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-07c4cb9e8ed49d77fd3b5b04a018ea00": [{"pais": "Argentina", "codigo_pais": "ARG", "year": 2000, "co2_per_capita": 3.67485781688948, "gdp_per_capita": 7637.01489203628, "carbon_intensity": 0.345652621286959, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2001, "co2_per_capita": 3.49042420795313, "gdp_per_capita": 7141.47507662826, "carbon_intensity": 0.347238694732433, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2002, "co2_per_capita": 3.26103662726385, "gdp_per_capita": 2569.69963519124, "carbon_intensity": 0.367997947755154, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2003, "co2_per_capita": 3.51848864736106, "gdp_per_capita": 3320.47775133903, "carbon_intensity": 0.368600583920812, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2004, "co2_per_capita": 3.85579719412006, "gdp_per_capita": 4242.02099089422, "carbon_intensity": 0.374260345081862, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2005, "co2_per_capita": 3.91742679391727, "gdp_per_capita": 5067.65342293276, "carbon_intensity": 0.352929252420464, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2006, "co2_per_capita": 4.1027920897206, "gdp_per_capita": 5869.38028970204, "carbon_intensity": 0.345635686897141, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2007, "co2_per_capita": 4.32534235715168, "gdp_per_capita": 7185.25155147027, "carbon_intensity": 0.337603450012121, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2008, "co2_per_capita": 4.43359004127929, "gdp_per_capita": 8944.1102657357, "carbon_intensity": 0.335945298161485, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2009, "co2_per_capita": 4.03429401041948, "gdp_per_capita": 8150.23527028221, "carbon_intensity": 0.328381744351758, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2010, "co2_per_capita": 4.2945461050427, "gdp_per_capita": 10260.1313108254, "carbon_intensity": 0.320796015642881, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2011, "co2_per_capita": 4.42921822947444, "gdp_per_capita": 12704.2831819684, "carbon_intensity": 0.315457477843001, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2012, "co2_per_capita": 4.47886128746974, "gdp_per_capita": 12949.717486654, "carbon_intensity": 0.325630562495036, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2013, "co2_per_capita": 4.53658672333476, "gdp_per_capita": 12963.675773326, "carbon_intensity": 0.325294406517529, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2014, "co2_per_capita": 4.41674615124171, "gdp_per_capita": 12233.1444119186, "carbon_intensity": 0.328232970577366, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2015, "co2_per_capita": 4.51258701954955, "gdp_per_capita": 13679.6264980954, "carbon_intensity": 0.329876478731187, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2016, "co2_per_capita": 4.4223010437306, "gdp_per_capita": 12699.9623137756, "carbon_intensity": 0.333358889291288, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2017, "co2_per_capita": 4.32102910494897, "gdp_per_capita": 14532.5009308511, "carbon_intensity": 0.319600073598922, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2018, "co2_per_capita": 4.25075806940885, "gdp_per_capita": 11752.7998922979, "carbon_intensity": 0.325520839421516, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2019, "co2_per_capita": 4.07504069344001, "gdp_per_capita": 9955.97478680428, "carbon_intensity": 0.320707784699243, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2020, "co2_per_capita": 3.72002854932287, "gdp_per_capita": 8535.59938004389, "carbon_intensity": 0.326517337744315, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2021, "co2_per_capita": 4.09769704597303, "gdp_per_capita": 10738.0179223384, "carbon_intensity": 0.326528427444146, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Argentina", "codigo_pais": "ARG", "year": 2022, "co2_per_capita": 4.2953116708492, "gdp_per_capita": 13962.1894087223, "carbon_intensity": 0.323519534950528, "region": "Am\u00e9rica Latina", "id_numerico": 32}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2000, "co2_per_capita": 18.5978917642845, "gdp_per_capita": 21908.9968019784, "carbon_intensity": 0.404485978265117, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2001, "co2_per_capita": 18.6995326153179, "gdp_per_capita": 19733.6510102645, "carbon_intensity": 0.403750072658745, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2002, "co2_per_capita": 18.9093269577501, "gdp_per_capita": 20335.0960191023, "carbon_intensity": 0.397259709322076, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2003, "co2_per_capita": 18.6676694689453, "gdp_per_capita": 23757.5898471684, "carbon_intensity": 0.384823728522702, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2004, "co2_per_capita": 19.1634087908315, "gdp_per_capita": 30886.0500949401, "carbon_intensity": 0.38312572623585, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2005, "co2_per_capita": 19.0378039300894, "gdp_per_capita": 34535.20727091, "carbon_intensity": 0.373490636073977, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2006, "co2_per_capita": 19.0793285754815, "gdp_per_capita": 36658.8243476122, "carbon_intensity": 0.36916139256275, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2007, "co2_per_capita": 19.2389222350972, "gdp_per_capita": 41128.2476618402, "carbon_intensity": 0.365263678592093, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2008, "co2_per_capita": 19.02811960112, "gdp_per_capita": 49811.2067218988, "carbon_intensity": 0.355683901184324, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2009, "co2_per_capita": 18.9151698120932, "gdp_per_capita": 42954.8494884573, "carbon_intensity": 0.354014281813389, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2010, "co2_per_capita": 18.8509537372201, "gdp_per_capita": 52313.8939041213, "carbon_intensity": 0.350595728354591, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2011, "co2_per_capita": 18.480821685778, "gdp_per_capita": 62799.3895017032, "carbon_intensity": 0.340370242279155, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2012, "co2_per_capita": 18.1834489375025, "gdp_per_capita": 68301.4402512587, "carbon_intensity": 0.327833816450871, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2013, "co2_per_capita": 17.5432435542019, "gdp_per_capita": 68476.6788496118, "carbon_intensity": 0.313461677524814, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2014, "co2_per_capita": 16.8873574131124, "gdp_per_capita": 62817.2061751737, "carbon_intensity": 0.298511900747079, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2015, "co2_per_capita": 16.8219551608068, "gdp_per_capita": 56970.3613028094, "carbon_intensity": 0.295275556905715, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2016, "co2_per_capita": 16.8911897350521, "gdp_per_capita": 50084.4440606385, "carbon_intensity": 0.293081912349965, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2017, "co2_per_capita": 16.7209445382487, "gdp_per_capita": 54117.547718609, "carbon_intensity": 0.28833305397935, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2018, "co2_per_capita": 16.3939979308791, "gdp_per_capita": 57410.1737346009, "carbon_intensity": 0.278938966038956, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2019, "co2_per_capita": 16.1007065925773, "gdp_per_capita": 55194.7585097428, "carbon_intensity": 0.272057333137275, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2020, "co2_per_capita": 15.3043785143331, "gdp_per_capita": 51983.4523666382, "carbon_intensity": 0.262161080960125, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2021, "co2_per_capita": 14.9787241100123, "gdp_per_capita": 60758.9044397144, "carbon_intensity": 0.251889164722103, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Australia", "codigo_pais": "AUS", "year": 2022, "co2_per_capita": 14.530502863688, "gdp_per_capita": 65169.5191118657, "carbon_intensity": 0.237424737096607, "region": "Ocean\u00eda", "id_numerico": 36}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2000, "co2_per_capita": 2.00787868943563, "gdp_per_capita": 3766.54786339835, "carbon_intensity": 0.294506081381515, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2001, "co2_per_capita": 1.9928207750233, "gdp_per_capita": 3176.28975052524, "carbon_intensity": 0.292072560832628, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2002, "co2_per_capita": 1.96879630651915, "gdp_per_capita": 2855.94017137049, "carbon_intensity": 0.283499396114186, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2003, "co2_per_capita": 1.91839410561756, "gdp_per_capita": 3090.6068907839, "carbon_intensity": 0.276368332781879, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2004, "co2_per_capita": 1.99978275095698, "gdp_per_capita": 3663.82262497811, "carbon_intensity": 0.275498426857074, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2005, "co2_per_capita": 1.99935674253319, "gdp_per_capita": 4827.78165890291, "carbon_intensity": 0.269834444734221, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2006, "co2_per_capita": 2.00204169117872, "gdp_per_capita": 5934.14561857454, "carbon_intensity": 0.262664838127605, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2007, "co2_per_capita": 2.08496718576573, "gdp_per_capita": 7409.69003822861, "carbon_intensity": 0.260514959482657, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2008, "co2_per_capita": 2.16839391882541, "gdp_per_capita": 8908.33338467948, "carbon_intensity": 0.260287533355168, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2009, "co2_per_capita": 2.00746250710986, "gdp_per_capita": 8678.6584730653, "carbon_intensity": 0.243443985808256, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2010, "co2_per_capita": 2.27112813109879, "gdp_per_capita": 11403.2840038694, "carbon_intensity": 0.258298969239114, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2011, "co2_per_capita": 2.37418967936326, "gdp_per_capita": 13396.6263158041, "carbon_intensity": 0.261820880289002, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2012, "co2_per_capita": 2.52901988702936, "gdp_per_capita": 12521.7238454434, "carbon_intensity": 0.275868054307785, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2013, "co2_per_capita": 2.63744450973958, "gdp_per_capita": 12458.8903396625, "carbon_intensity": 0.281575553866694, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2014, "co2_per_capita": 2.7310345760982, "gdp_per_capita": 12274.9941630213, "carbon_intensity": 0.292453913272279, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2015, "co2_per_capita": 2.56818858918394, "gdp_per_capita": 8936.1955889444, "carbon_intensity": 0.287391716488527, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2016, "co2_per_capita": 2.37533549789759, "gdp_per_capita": 8836.28546025694, "carbon_intensity": 0.276915252342919, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2017, "co2_per_capita": 2.41694955353585, "gdp_per_capita": 10080.5078722821, "carbon_intensity": 0.280120414484441, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2018, "co2_per_capita": 2.28562350357953, "gdp_per_capita": 9300.66072904004, "carbon_intensity": 0.262042609581353, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2019, "co2_per_capita": 2.25869881785082, "gdp_per_capita": 9029.83304401079, "carbon_intensity": 0.25750605894179, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2020, "co2_per_capita": 2.1466461829, "gdp_per_capita": 7074.19407495707, "carbon_intensity": 0.254492414982452, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2021, "co2_per_capita": 2.41580858865319, "gdp_per_capita": 7972.53696080695, "carbon_intensity": 0.274547774675226, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "Brazil", "codigo_pais": "BRA", "year": 2022, "co2_per_capita": 2.27889577215227, "gdp_per_capita": 9281.33282136864, "carbon_intensity": 0.252311186269326, "region": "Am\u00e9rica Latina", "id_numerico": 76}, {"pais": "China", "codigo_pais": "CHN", "year": 2000, "co2_per_capita": 2.88907594771294, "gdp_per_capita": 969.199513696287, "carbon_intensity": 1.29124003028333, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2001, "co2_per_capita": 3.00747564571294, "gdp_per_capita": 1065.40597574519, "carbon_intensity": 1.2500449672447, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2002, "co2_per_capita": 3.22795454545455, "gdp_per_capita": 1163.55957673426, "carbon_intensity": 1.23641856373563, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2003, "co2_per_capita": 3.70467882645141, "gdp_per_capita": 1306.97245408557, "carbon_intensity": 1.29668547088091, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2004, "co2_per_capita": 4.24069749050016, "gdp_per_capita": 1530.92726215723, "carbon_intensity": 1.35578118632061, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2005, "co2_per_capita": 4.78299420120885, "gdp_per_capita": 1777.64496828464, "carbon_intensity": 1.38004797320084, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2006, "co2_per_capita": 5.28052516361306, "gdp_per_capita": 2129.25696999613, "carbon_intensity": 1.35978460568449, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2007, "co2_per_capita": 5.7076324565497, "gdp_per_capita": 2734.72709877693, "carbon_intensity": 1.29431903973798, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2008, "co2_per_capita": 5.85225866357655, "gdp_per_capita": 3523.44302065213, "carbon_intensity": 1.21631287838271, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2009, "co2_per_capita": 6.24909018523805, "gdp_per_capita": 3898.24459158811, "carbon_intensity": 1.19308296540098, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2010, "co2_per_capita": 6.80718476794211, "gdp_per_capita": 4629.24551710077, "carbon_intensity": 1.18080550972293, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2011, "co2_per_capita": 7.40185065816131, "gdp_per_capita": 5703.76027973346, "carbon_intensity": 1.17940683852303, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2012, "co2_per_capita": 7.58441651466929, "gdp_per_capita": 6405.0574241349, "carbon_intensity": 1.12809715458083, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2013, "co2_per_capita": 7.89327631231478, "gdp_per_capita": 7147.03518622344, "carbon_intensity": 1.0965825098719, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2014, "co2_per_capita": 7.93164331637339, "gdp_per_capita": 7781.06597484974, "carbon_intensity": 1.0318822483914, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2015, "co2_per_capita": 7.79057049265868, "gdp_per_capita": 8175.33285077393, "carbon_intensity": 0.952936184356233, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2016, "co2_per_capita": 7.76322483949301, "gdp_per_capita": 8254.86859320357, "carbon_intensity": 0.894444935344965, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2017, "co2_per_capita": 7.87802652170332, "gdp_per_capita": 8979.67652709856, "carbon_intensity": 0.854309443011614, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2018, "co2_per_capita": 8.2177362485386, "gdp_per_capita": 10085.6638148819, "carbon_intensity": 0.838659800727931, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2019, "co2_per_capita": 8.39147587098516, "gdp_per_capita": 10342.9009524335, "carbon_intensity": 0.810263287437438, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2020, "co2_per_capita": 8.47858302033874, "gdp_per_capita": 10627.4637989619, "carbon_intensity": 0.801860230901059, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2021, "co2_per_capita": 8.88715660313235, "gdp_per_capita": 12887.4357242941, "carbon_intensity": 0.774846489474757, "region": "Asia", "id_numerico": 156}, {"pais": "China", "codigo_pais": "CHN", "year": 2022, "co2_per_capita": 8.86482511020235, "gdp_per_capita": 12970.6056414327, "carbon_intensity": 0.749313334177565, "region": "Asia", "id_numerico": 156}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2000, "co2_per_capita": 10.5993032021746, "gdp_per_capita": 23925.8559901991, "carbon_intensity": 0.301938915634639, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2001, "co2_per_capita": 10.7525841705381, "gdp_per_capita": 23878.3641471651, "carbon_intensity": 0.301881882520065, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2002, "co2_per_capita": 10.546202837135, "gdp_per_capita": 25486.5942008748, "carbon_intensity": 0.297264416383968, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2003, "co2_per_capita": 10.6369632865784, "gdp_per_capita": 30711.1022511331, "carbon_intensity": 0.301586516359268, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2004, "co2_per_capita": 10.4632650583049, "gdp_per_capita": 34566.7359143735, "carbon_intensity": 0.293190182442704, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2005, "co2_per_capita": 10.2067903422435, "gdp_per_capita": 35084.4363546269, "carbon_intensity": 0.283332320379205, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2006, "co2_per_capita": 10.3846207212787, "gdp_per_capita": 36980.3349948954, "carbon_intensity": 0.277224385989287, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2007, "co2_per_capita": 10.0478127320359, "gdp_per_capita": 42350.9217211489, "carbon_intensity": 0.26035273774805, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2008, "co2_per_capita": 10.1072965484379, "gdp_per_capita": 46379.1647953479, "carbon_intensity": 0.259096026461803, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2009, "co2_per_capita": 9.37864424258525, "gdp_per_capita": 42471.8868625226, "carbon_intensity": 0.253885779395953, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2010, "co2_per_capita": 9.96567124737992, "gdp_per_capita": 42396.9665976293, "carbon_intensity": 0.258668965929002, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2011, "co2_per_capita": 9.81776726131477, "gdp_per_capita": 47630.9761883572, "carbon_intensity": 0.241089591633632, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2012, "co2_per_capita": 9.94745307113612, "gdp_per_capita": 44718.0159214069, "carbon_intensity": 0.243604082873514, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2013, "co2_per_capita": 10.1408601249876, "gdp_per_capita": 47206.8353514242, "carbon_intensity": 0.248034407363494, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2014, "co2_per_capita": 9.61630846170469, "gdp_per_capita": 48959.5991203133, "carbon_intensity": 0.231147558225977, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2015, "co2_per_capita": 9.60884887243027, "gdp_per_capita": 41929.7549110722, "carbon_intensity": 0.229165395619637, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2016, "co2_per_capita": 9.58423383867929, "gdp_per_capita": 42948.9381932694, "carbon_intensity": 0.225421567436713, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2017, "co2_per_capita": 9.36976518940283, "gdp_per_capita": 45553.9341495339, "carbon_intensity": 0.21518181453774, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2018, "co2_per_capita": 9.00657809367265, "gdp_per_capita": 48916.1686612154, "carbon_intensity": 0.205133873202136, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2019, "co2_per_capita": 8.38218043063623, "gdp_per_capita": 47656.199739747, "carbon_intensity": 0.189490901907181, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2020, "co2_per_capita": 7.72103264767393, "gdp_per_capita": 47394.8734504469, "carbon_intensity": 0.182216407801049, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2021, "co2_per_capita": 8.06128144646434, "gdp_per_capita": 52349.2459994422, "carbon_intensity": 0.183165069675579, "region": "Europa", "id_numerico": 276}, {"pais": "Germany", "codigo_pais": "DEU", "year": 2022, "co2_per_capita": 7.91182860265874, "gdp_per_capita": 50506.5179638543, "carbon_intensity": 0.176535809284335, "region": "Europa", "id_numerico": 276}, {"pais": "India", "codigo_pais": "IND", "year": 2000, "co2_per_capita": 0.942309744278839, "gdp_per_capita": 442.750218937263, "carbon_intensity": 1.24528165291358, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2001, "co2_per_capita": 0.939789720011458, "gdp_per_capita": 450.357900514128, "carbon_intensity": 1.20716867577432, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2002, "co2_per_capita": 0.957620477500199, "gdp_per_capita": 469.149928973927, "carbon_intensity": 1.20665483381401, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2003, "co2_per_capita": 0.969744882653011, "gdp_per_capita": 544.143133545002, "carbon_intensity": 1.15270321044574, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2004, "co2_per_capita": 1.02822643182898, "gdp_per_capita": 624.258826510066, "carbon_intensity": 1.15194973298319, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2005, "co2_per_capita": 1.05460489385527, "gdp_per_capita": 710.488080408949, "carbon_intensity": 1.11276633523263, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2006, "co2_per_capita": 1.10810989189174, "gdp_per_capita": 801.668353659022, "carbon_intensity": 1.09906158881801, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2007, "co2_per_capita": 1.18862350046436, "gdp_per_capita": 1021.88707706826, "carbon_intensity": 1.11164542513771, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2008, "co2_per_capita": 1.25815998206335, "gdp_per_capita": 992.519584923828, "carbon_intensity": 1.15798709004047, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2009, "co2_per_capita": 1.32284533301467, "gdp_per_capita": 1094.94974598436, "carbon_intensity": 1.14521986249365, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2010, "co2_per_capita": 1.39129863287623, "gdp_per_capita": 1347.51939071367, "carbon_intensity": 1.12641222066683, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2011, "co2_per_capita": 1.46337391608571, "gdp_per_capita": 1445.46127486037, "carbon_intensity": 1.14182418633433, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2012, "co2_per_capita": 1.57607553513255, "gdp_per_capita": 1429.32199520032, "carbon_intensity": 1.1822668593635, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2013, "co2_per_capita": 1.59945855716817, "gdp_per_capita": 1432.84397512195, "carbon_intensity": 1.14291630021741, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2014, "co2_per_capita": 1.70517686000076, "gdp_per_capita": 1553.88396075118, "carbon_intensity": 1.14879607350258, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2015, "co2_per_capita": 1.71550269097521, "gdp_per_capita": 1583.99815907985, "carbon_intensity": 1.08302063429906, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2016, "co2_per_capita": 1.7202923565219, "gdp_per_capita": 1707.50892912243, "carbon_intensity": 1.0152419798892, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2017, "co2_per_capita": 1.79545339877531, "gdp_per_capita": 1950.10468280866, "carbon_intensity": 1.00377687944633, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2018, "co2_per_capita": 1.85989309419052, "gdp_per_capita": 1966.25455171679, "carbon_intensity": 0.987541064279464, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2019, "co2_per_capita": 1.83688223212799, "gdp_per_capita": 2041.42863698585, "carbon_intensity": 0.948787771578454, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2020, "co2_per_capita": 1.68040016064392, "gdp_per_capita": 1907.04251637669, "carbon_intensity": 0.930196032104661, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2021, "co2_per_capita": 1.83702951699406, "gdp_per_capita": 2239.61384367482, "carbon_intensity": 0.934727877891763, "region": "Asia", "id_numerico": 356}, {"pais": "India", "codigo_pais": "IND", "year": 2022, "co2_per_capita": 1.96929618962877, "gdp_per_capita": 2347.44829434623, "carbon_intensity": 0.938559544252472, "region": "Asia", "id_numerico": 356}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2000, "co2_per_capita": 1.38408579613851, "gdp_per_capita": 763.711124950924, "carbon_intensity": 0.757116012499023, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2001, "co2_per_capita": 1.45853518944239, "gdp_per_capita": 732.307093405708, "carbon_intensity": 0.780553168160143, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2002, "co2_per_capita": 1.46310550665851, "gdp_per_capita": 881.002913569131, "carbon_intensity": 0.759512552721027, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2003, "co2_per_capita": 1.57132250644049, "gdp_per_capita": 1043.2105838671, "carbon_intensity": 0.788848910786188, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2004, "co2_per_capita": 1.58011931285841, "gdp_per_capita": 1126.84004447173, "carbon_intensity": 0.764929365175302, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2005, "co2_per_capita": 1.57055662745946, "gdp_per_capita": 1238.21447629488, "carbon_intensity": 0.728645168906147, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2006, "co2_per_capita": 1.63888306289882, "gdp_per_capita": 1558.31562847163, "carbon_intensity": 0.730313937255441, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2007, "co2_per_capita": 1.69488500402322, "gdp_per_capita": 1823.21976255073, "carbon_intensity": 0.719649681897247, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2008, "co2_per_capita": 1.6541425247205, "gdp_per_capita": 2124.55483920618, "carbon_intensity": 0.671160117899128, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2009, "co2_per_capita": 1.69126327047376, "gdp_per_capita": 2218.48541852977, "carbon_intensity": 0.664225193299245, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2010, "co2_per_capita": 1.80134962735397, "gdp_per_capita": 3065.68348377765, "carbon_intensity": 0.674457436041295, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2011, "co2_per_capita": 2.00399300866727, "gdp_per_capita": 3579.46442466152, "carbon_intensity": 0.715807735703383, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2012, "co2_per_capita": 1.9954892890649, "gdp_per_capita": 3632.27254030331, "carbon_intensity": 0.680933877843231, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2013, "co2_per_capita": 1.85640226795234, "gdp_per_capita": 3566.60284506078, "carbon_intensity": 0.607612093710242, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2014, "co2_per_capita": 1.95102470107868, "gdp_per_capita": 3441.06808464008, "carbon_intensity": 0.615325247017506, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2015, "co2_per_capita": 1.95721455259026, "gdp_per_capita": 3288.22269725538, "carbon_intensity": 0.595219586016454, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2016, "co2_per_capita": 1.91626591013332, "gdp_per_capita": 3521.46943457574, "carbon_intensity": 0.560834778970066, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2017, "co2_per_capita": 2.00394276108737, "gdp_per_capita": 3798.88326174526, "carbon_intensity": 0.56393175365479, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2018, "co2_per_capita": 2.20953925241911, "gdp_per_capita": 3860.95353090726, "carbon_intensity": 0.596959550747945, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2019, "co2_per_capita": 2.33979466524606, "gdp_per_capita": 4106.94856160358, "carbon_intensity": 0.607596330824437, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2020, "co2_per_capita": 2.16976580881181, "gdp_per_capita": 3853.70288774146, "carbon_intensity": 0.580236759675006, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2021, "co2_per_capita": 2.24993200107532, "gdp_per_capita": 4287.17313995098, "carbon_intensity": 0.584293391125397, "region": "Asia", "id_numerico": 360}, {"pais": "Indonesia", "codigo_pais": "IDN", "year": 2022, "co2_per_capita": 2.5918955237502, "gdp_per_capita": 4730.83484836107, "carbon_intensity": 0.64396323718438, "region": "Asia", "id_numerico": 360}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2000, "co2_per_capita": 4.02272121123337, "gdp_per_capita": 7524.0271380091, "carbon_intensity": 0.419821950631777, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2001, "co2_per_capita": 3.94395058441036, "gdp_per_capita": 7952.76479510706, "carbon_intensity": 0.419642838624001, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2002, "co2_per_capita": 3.94830756150866, "gdp_per_capita": 7983.03398381759, "carbon_intensity": 0.427200652648694, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2003, "co2_per_capita": 4.08541432161845, "gdp_per_capita": 7434.0746485155, "carbon_intensity": 0.443007568661164, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2004, "co2_per_capita": 4.12339368005276, "gdp_per_capita": 7849.66759649565, "carbon_intensity": 0.437667642663097, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2005, "co2_per_capita": 4.22758379844974, "gdp_per_capita": 8671.75891885163, "carbon_intensity": 0.445406531308159, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2006, "co2_per_capita": 4.32571227914951, "gdp_per_capita": 9512.63575346699, "carbon_intensity": 0.440777264533454, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2007, "co2_per_capita": 4.32899168517287, "gdp_per_capita": 10134.3327138119, "carbon_intensity": 0.438259284388137, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2008, "co2_per_capita": 4.27910076303278, "gdp_per_capita": 10523.7685403244, "carbon_intensity": 0.435472394821792, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2009, "co2_per_capita": 4.12122098054155, "gdp_per_capita": 8423.56933214711, "carbon_intensity": 0.454173134027122, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2010, "co2_per_capita": 4.19755809286418, "gdp_per_capita": 9728.80078377082, "carbon_intensity": 0.447068701728542, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2011, "co2_per_capita": 4.22179978144365, "gdp_per_capita": 10664.4944032313, "carbon_intensity": 0.440876014271073, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2012, "co2_per_capita": 4.33350424276325, "gdp_per_capita": 10744.1335242686, "carbon_intensity": 0.442984551393299, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2013, "co2_per_capita": 4.17443117084187, "gdp_per_capita": 11216.8008505428, "carbon_intensity": 0.42864310719773, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2014, "co2_per_capita": 4.01481960973153, "gdp_per_capita": 11391.3773497683, "carbon_intensity": 0.407080075100096, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2015, "co2_per_capita": 4.05069677949307, "gdp_per_capita": 10021.2386118827, "carbon_intensity": 0.40421118949208, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2016, "co2_per_capita": 4.06104469144067, "gdp_per_capita": 9097.92397674769, "carbon_intensity": 0.402063644225757, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2017, "co2_per_capita": 4.05743329599921, "gdp_per_capita": 9649.27816772402, "carbon_intensity": 0.398030582759516, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2018, "co2_per_capita": 3.83831705872518, "gdp_per_capita": 10084.7937562021, "carbon_intensity": 0.372765451722523, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2019, "co2_per_capita": 3.92542377851696, "gdp_per_capita": 10369.5553585271, "carbon_intensity": 0.386381720823991, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2020, "co2_per_capita": 3.46247141559905, "gdp_per_capita": 8841.27075039868, "carbon_intensity": 0.374943696463623, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2021, "co2_per_capita": 3.54662489893704, "gdp_per_capita": 10314.0506722115, "carbon_intensity": 0.364576911065974, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Mexico", "codigo_pais": "MEX", "year": 2022, "co2_per_capita": 3.52183828963573, "gdp_per_capita": 11405.7940473759, "carbon_intensity": 0.351717875808324, "region": "Am\u00e9rica Latina", "id_numerico": 484}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2000, "co2_per_capita": 0.792790969926579, "gdp_per_capita": 547.318298903379, "carbon_intensity": 0.557643799667598, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2001, "co2_per_capita": 0.818897081180304, "gdp_per_capita": 566.428231812933, "carbon_intensity": 0.558799724254984, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2002, "co2_per_capita": 0.720895078592108, "gdp_per_capita": 712.164852077686, "carbon_intensity": 0.438395273540396, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2003, "co2_per_capita": 0.7843536892773, "gdp_per_capita": 763.388745367223, "carbon_intensity": 0.456759294892533, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2004, "co2_per_capita": 0.736921009510727, "gdp_per_capita": 962.48104194733, "carbon_intensity": 0.403835993723854, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2005, "co2_per_capita": 0.710050686175941, "gdp_per_capita": 1211.37703504386, "carbon_intensity": 0.375836986760179, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2006, "co2_per_capita": 0.621989926382773, "gdp_per_capita": 1599.53891556365, "carbon_intensity": 0.319106888777355, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2007, "co2_per_capita": 0.550572897626193, "gdp_per_capita": 1815.52697545827, "carbon_intensity": 0.27244846715121, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2008, "co2_per_capita": 0.581139578438694, "gdp_per_capita": 2154.10543545364, "carbon_intensity": 0.2769595282492, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2009, "co2_per_capita": 0.499337659024901, "gdp_per_capita": 1820.48633854782, "carbon_intensity": 0.226497330831815, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2010, "co2_per_capita": 0.566502430832841, "gdp_per_capita": 2202.25672957344, "carbon_intensity": 0.244660143420024, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2011, "co2_per_capita": 0.606966647220167, "gdp_per_capita": 2418.41316975875, "carbon_intensity": 0.255998584998735, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2012, "co2_per_capita": 0.580337328542393, "gdp_per_capita": 2633.19734671361, "carbon_intensity": 0.241439640548937, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2013, "co2_per_capita": 0.63302873569183, "gdp_per_capita": 2872.79083379398, "carbon_intensity": 0.253684253581079, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2014, "co2_per_capita": 0.660183629190404, "gdp_per_capita": 3088.72131316169, "carbon_intensity": 0.255527036205842, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2015, "co2_per_capita": 0.621244733321397, "gdp_per_capita": 2585.73360671797, "carbon_intensity": 0.240258598839164, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2016, "co2_per_capita": 0.631791150085677, "gdp_per_capita": 2070.4127339595, "carbon_intensity": 0.254568198939356, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2017, "co2_per_capita": 0.579461406473008, "gdp_per_capita": 1876.34027111773, "carbon_intensity": 0.23731763618262, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2018, "co2_per_capita": 0.592412108680957, "gdp_per_capita": 2057.87944554011, "carbon_intensity": 0.243612684954583, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2019, "co2_per_capita": 0.60197968413501, "gdp_per_capita": 3189.81286498516, "carbon_intensity": 0.247571848089343, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2020, "co2_per_capita": 0.555700571123744, "gdp_per_capita": 2797.18458068686, "carbon_intensity": 0.249339966587453, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2021, "co2_per_capita": 0.599006670437755, "gdp_per_capita": 2787.48779224428, "carbon_intensity": 0.271453494266337, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Nigeria", "codigo_pais": "NGA", "year": 2022, "co2_per_capita": 0.578271036832404, "gdp_per_capita": 2899.16047470324, "carbon_intensity": 0.256520159583223, "region": "\u00c1frica", "id_numerico": 566}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2000, "co2_per_capita": 16.3953985610582, "gdp_per_capita": 11714.5623675159, "carbon_intensity": 0.736942833777957, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2001, "co2_per_capita": 16.1835734476463, "gdp_per_capita": 10805.311325122, "carbon_intensity": 0.76362492205604, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2002, "co2_per_capita": 16.3991276825131, "gdp_per_capita": 10586.0543471363, "carbon_intensity": 0.818915051752909, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2003, "co2_per_capita": 16.4119297375647, "gdp_per_capita": 11487.220410693, "carbon_intensity": 0.790329294537676, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2004, "co2_per_capita": 16.6257165924061, "gdp_per_capita": 13154.4978989446, "carbon_intensity": 0.771641957839217, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2005, "co2_per_capita": 16.8475463633317, "gdp_per_capita": 15975.7473782258, "carbon_intensity": 0.771471682367951, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2006, "co2_per_capita": 17.0903135744837, "gdp_per_capita": 17563.6145370639, "carbon_intensity": 0.790620293315071, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2007, "co2_per_capita": 17.3405924711443, "gdp_per_capita": 18596.1502627898, "carbon_intensity": 0.818076243674125, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2008, "co2_per_capita": 18.0563174565032, "gdp_per_capita": 22320.4888964331, "carbon_intensity": 0.834787357548192, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2009, "co2_per_capita": 18.3345628771474, "gdp_per_capita": 17718.3911648365, "carbon_intensity": 0.890998540893409, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2010, "co2_per_capita": 20.3047423300728, "gdp_per_capita": 22028.3901426586, "carbon_intensity": 0.930124134448957, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2011, "co2_per_capita": 20.2940259487267, "gdp_per_capita": 27126.7498747702, "carbon_intensity": 0.870444393365203, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2012, "co2_per_capita": 20.6100945700312, "gdp_per_capita": 28733.4375513452, "carbon_intensity": 0.871719465980383, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2013, "co2_per_capita": 19.8087286694572, "gdp_per_capita": 27865.465604962, "carbon_intensity": 0.85910692879577, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2014, "co2_per_capita": 20.6973806780556, "gdp_per_capita": 27805.4850319422, "carbon_intensity": 0.88432467043794, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2015, "co2_per_capita": 20.5071259148746, "gdp_per_capita": 23256.1549553531, "carbon_intensity": 0.881793484531039, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2016, "co2_per_capita": 19.6907023725829, "gdp_per_capita": 22267.7217050387, "carbon_intensity": 0.864270463852639, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2017, "co2_per_capita": 19.4764691820848, "gdp_per_capita": 23929.2907135982, "carbon_intensity": 0.845511948015451, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2018, "co2_per_capita": 19.2090840590601, "gdp_per_capita": 29360.0658968566, "carbon_intensity": 0.787466711646103, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2019, "co2_per_capita": 19.2859458646594, "gdp_per_capita": 29566.7933827436, "carbon_intensity": 0.774359656406811, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2020, "co2_per_capita": 18.2902881577409, "gdp_per_capita": 24338.8307301067, "carbon_intensity": 0.80123317916001, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2021, "co2_per_capita": 19.1759893319934, "gdp_per_capita": 31920.7653655643, "carbon_intensity": 0.769419489481208, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "Saudi Arabia", "codigo_pais": "SAU", "year": 2022, "co2_per_capita": 19.282874301046, "gdp_per_capita": 38510.2276211037, "carbon_intensity": 0.722017956337296, "region": "Medio Oriente", "id_numerico": 682}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2000, "co2_per_capita": 7.36397941641679, "gdp_per_capita": 3217.84693448467, "carbon_intensity": 1.56651230823866, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2001, "co2_per_capita": 7.51319828115408, "gdp_per_capita": 2847.15191945908, "carbon_intensity": 1.56967007795617, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2002, "co2_per_capita": 7.72131022420827, "gdp_per_capita": 2688.23676032806, "carbon_intensity": 1.57038860614816, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2003, "co2_per_capita": 8.11491084558816, "gdp_per_capita": 4062.21755993786, "carbon_intensity": 1.61921838293797, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2004, "co2_per_capita": 8.69023374521021, "gdp_per_capita": 5221.46333731721, "carbon_intensity": 1.67527201673275, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2005, "co2_per_capita": 8.81501533854301, "gdp_per_capita": 5836.87663325127, "carbon_intensity": 1.63057560459652, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2006, "co2_per_capita": 8.81243167639557, "gdp_per_capita": 6077.38293388876, "carbon_intensity": 1.55944963624569, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2007, "co2_per_capita": 9.10281000552084, "gdp_per_capita": 6591.85535960564, "carbon_intensity": 1.54509590775891, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2008, "co2_per_capita": 9.54569945858325, "gdp_per_capita": 6184.75474328399, "carbon_intensity": 1.58837683687104, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2009, "co2_per_capita": 8.83353970564321, "gdp_per_capita": 6374.70560042992, "carbon_intensity": 1.51076653219144, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2010, "co2_per_capita": 8.87117430020844, "gdp_per_capita": 7973.47195771517, "carbon_intensity": 1.48996576272868, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2011, "co2_per_capita": 8.37758623633968, "gdp_per_capita": 8646.05571071635, "carbon_intensity": 1.38081652757273, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2012, "co2_per_capita": 8.57667504044573, "gdp_per_capita": 8076.97678479741, "carbon_intensity": 1.40106085192151, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2013, "co2_per_capita": 8.68872722515024, "gdp_per_capita": 7331.65467384919, "carbon_intensity": 1.40802152358574, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2014, "co2_per_capita": 8.75262375978144, "gdp_per_capita": 6856.73137092522, "carbon_intensity": 1.42203336757559, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2015, "co2_per_capita": 8.14948651738695, "gdp_per_capita": 6112.27382485974, "carbon_intensity": 1.33329866280557, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2016, "co2_per_capita": 8.03701551903542, "gdp_per_capita": 5651.20585165749, "carbon_intensity": 1.31856053552083, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2017, "co2_per_capita": 8.14751418587147, "gdp_per_capita": 6618.33508255701, "carbon_intensity": 1.33005611747563, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2018, "co2_per_capita": 8.077016906198, "gdp_per_capita": 6914.1780318076, "carbon_intensity": 1.32036295938364, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2019, "co2_per_capita": 8.01412233375962, "gdp_per_capita": 6533.71121032856, "carbon_intensity": 1.32841845332356, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2020, "co2_per_capita": 7.4445834618028, "gdp_per_capita": 5580.60383075189, "carbon_intensity": 1.33664962196747, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2021, "co2_per_capita": 7.29340675223128, "gdp_per_capita": 6828.75624590017, "carbon_intensity": 1.26821799421769, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "South Africa", "codigo_pais": "ZAF", "year": 2022, "co2_per_capita": 6.88263936192025, "gdp_per_capita": 6534.24867783397, "carbon_intensity": 1.18935542791345, "region": "\u00c1frica", "id_numerico": 710}, {"pais": "United States", "codigo_pais": "USA", "year": 2000, "co2_per_capita": 21.0118753202743, "gdp_per_capita": 36329.9560727102, "carbon_intensity": 0.434311319811155, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2001, "co2_per_capita": 20.6255077855762, "gdp_per_capita": 37133.623113437, "carbon_intensity": 0.426490366975372, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2002, "co2_per_capita": 19.9103793387111, "gdp_per_capita": 37997.7596573051, "carbon_intensity": 0.408592717228362, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2003, "co2_per_capita": 19.9681657791826, "gdp_per_capita": 39490.2749557007, "carbon_intensity": 0.402075296936323, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2004, "co2_per_capita": 20.0815597947275, "gdp_per_capita": 41724.6316287624, "carbon_intensity": 0.392996609993057, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2005, "co2_per_capita": 19.9249914215479, "gdp_per_capita": 44123.4070679055, "carbon_intensity": 0.38029545530716, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2006, "co2_per_capita": 19.4048177077015, "gdp_per_capita": 46302.0008800056, "carbon_intensity": 0.363824939757109, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2007, "co2_per_capita": 19.4956606869752, "gdp_per_capita": 48050.2237771135, "carbon_intensity": 0.36177173906039, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2008, "co2_per_capita": 18.7089026291301, "gdp_per_capita": 48570.0459804586, "carbon_intensity": 0.350073964014268, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2009, "co2_per_capita": 17.1890632001903, "gdp_per_capita": 47194.9433547336, "carbon_intensity": 0.333048304734052, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2010, "co2_per_capita": 17.847084306938, "gdp_per_capita": 48642.6100179312, "carbon_intensity": 0.339583731190289, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2011, "co2_per_capita": 17.0203888981196, "gdp_per_capita": 50024.868799398, "carbon_intensity": 0.321402216887439, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2012, "co2_per_capita": 16.1854221004814, "gdp_per_capita": 51708.4011556577, "carbon_intensity": 0.301190547159063, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2013, "co2_per_capita": 16.495975221911, "gdp_per_capita": 53179.0127634561, "carbon_intensity": 0.302886156310728, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2014, "co2_per_capita": 16.4248953102317, "gdp_per_capita": 54973.4207515712, "carbon_intensity": 0.296507953428833, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2015, "co2_per_capita": 15.9501022949136, "gdp_per_capita": 56572.9188996063, "carbon_intensity": 0.281938825239307, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2016, "co2_per_capita": 15.5045482189269, "gdp_per_capita": 57638.1018367192, "carbon_intensity": 0.27128869983103, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2017, "co2_per_capita": 15.1847127213968, "gdp_per_capita": 59635.0984397965, "carbon_intensity": 0.261122411946813, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2018, "co2_per_capita": 15.5796456645972, "gdp_per_capita": 62499.8744390068, "carbon_intensity": 0.261725488597865, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2019, "co2_per_capita": 15.0439662080505, "gdp_per_capita": 64746.4506778863, "carbon_intensity": 0.247633268892956, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2020, "co2_per_capita": 13.4715821678248, "gdp_per_capita": 63515.9491807833, "carbon_intensity": 0.227581012960174, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2021, "co2_per_capita": 14.3161154347115, "gdp_per_capita": 70205.050916026, "carbon_intensity": 0.228399142517971, "region": "Am\u00e9rica del Norte", "id_numerico": 840}, {"pais": "United States", "codigo_pais": "USA", "year": 2022, "co2_per_capita": 14.4177148825165, "gdp_per_capita": 76657.2488844403, "carbon_intensity": 0.225678320118737, "region": "Am\u00e9rica del Norte", "id_numerico": 840}]}};
-      var embedOpt = {"mode": "vega-lite"};
-
-      function showError(el, error){
-          el.innerHTML = ('<div style="color:red;">'
-                          + '<p>JavaScript Error: ' + error.message + '</p>'
-                          + "<p>This usually means there's a typo in your chart specification. "
-                          + "See the javascript console for the full traceback.</p>"
-                          + '</div>');
-          throw error;
+  ],
+  "title": {
+    "text": "Emisiones de CO₂ per cápita por país (2000–2022)",
+    "fontSize": 15,
+    "subtitle": "Click en la leyenda para resaltar una región · Scroll para hacer zoom",
+    "subtitleFontSize": 11
+  },
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-07c4cb9e8ed49d77fd3b5b04a018ea00": [
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2000,
+        "co2_per_capita": 3.67485781688948,
+        "gdp_per_capita": 7637.01489203628,
+        "carbon_intensity": 0.345652621286959,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2001,
+        "co2_per_capita": 3.49042420795313,
+        "gdp_per_capita": 7141.47507662826,
+        "carbon_intensity": 0.347238694732433,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2002,
+        "co2_per_capita": 3.26103662726385,
+        "gdp_per_capita": 2569.69963519124,
+        "carbon_intensity": 0.367997947755154,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2003,
+        "co2_per_capita": 3.51848864736106,
+        "gdp_per_capita": 3320.47775133903,
+        "carbon_intensity": 0.368600583920812,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2004,
+        "co2_per_capita": 3.85579719412006,
+        "gdp_per_capita": 4242.02099089422,
+        "carbon_intensity": 0.374260345081862,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2005,
+        "co2_per_capita": 3.91742679391727,
+        "gdp_per_capita": 5067.65342293276,
+        "carbon_intensity": 0.352929252420464,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2006,
+        "co2_per_capita": 4.1027920897206,
+        "gdp_per_capita": 5869.38028970204,
+        "carbon_intensity": 0.345635686897141,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2007,
+        "co2_per_capita": 4.32534235715168,
+        "gdp_per_capita": 7185.25155147027,
+        "carbon_intensity": 0.337603450012121,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2008,
+        "co2_per_capita": 4.43359004127929,
+        "gdp_per_capita": 8944.1102657357,
+        "carbon_intensity": 0.335945298161485,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2009,
+        "co2_per_capita": 4.03429401041948,
+        "gdp_per_capita": 8150.23527028221,
+        "carbon_intensity": 0.328381744351758,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2010,
+        "co2_per_capita": 4.2945461050427,
+        "gdp_per_capita": 10260.1313108254,
+        "carbon_intensity": 0.320796015642881,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2011,
+        "co2_per_capita": 4.42921822947444,
+        "gdp_per_capita": 12704.2831819684,
+        "carbon_intensity": 0.315457477843001,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2012,
+        "co2_per_capita": 4.47886128746974,
+        "gdp_per_capita": 12949.717486654,
+        "carbon_intensity": 0.325630562495036,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2013,
+        "co2_per_capita": 4.53658672333476,
+        "gdp_per_capita": 12963.675773326,
+        "carbon_intensity": 0.325294406517529,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2014,
+        "co2_per_capita": 4.41674615124171,
+        "gdp_per_capita": 12233.1444119186,
+        "carbon_intensity": 0.328232970577366,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2015,
+        "co2_per_capita": 4.51258701954955,
+        "gdp_per_capita": 13679.6264980954,
+        "carbon_intensity": 0.329876478731187,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2016,
+        "co2_per_capita": 4.4223010437306,
+        "gdp_per_capita": 12699.9623137756,
+        "carbon_intensity": 0.333358889291288,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2017,
+        "co2_per_capita": 4.32102910494897,
+        "gdp_per_capita": 14532.5009308511,
+        "carbon_intensity": 0.319600073598922,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2018,
+        "co2_per_capita": 4.25075806940885,
+        "gdp_per_capita": 11752.7998922979,
+        "carbon_intensity": 0.325520839421516,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2019,
+        "co2_per_capita": 4.07504069344001,
+        "gdp_per_capita": 9955.97478680428,
+        "carbon_intensity": 0.320707784699243,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2020,
+        "co2_per_capita": 3.72002854932287,
+        "gdp_per_capita": 8535.59938004389,
+        "carbon_intensity": 0.326517337744315,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2021,
+        "co2_per_capita": 4.09769704597303,
+        "gdp_per_capita": 10738.0179223384,
+        "carbon_intensity": 0.326528427444146,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Argentina",
+        "codigo_pais": "ARG",
+        "year": 2022,
+        "co2_per_capita": 4.2953116708492,
+        "gdp_per_capita": 13962.1894087223,
+        "carbon_intensity": 0.323519534950528,
+        "region": "América Latina",
+        "id_numerico": 32
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2000,
+        "co2_per_capita": 18.5978917642845,
+        "gdp_per_capita": 21908.9968019784,
+        "carbon_intensity": 0.404485978265117,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2001,
+        "co2_per_capita": 18.6995326153179,
+        "gdp_per_capita": 19733.6510102645,
+        "carbon_intensity": 0.403750072658745,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2002,
+        "co2_per_capita": 18.9093269577501,
+        "gdp_per_capita": 20335.0960191023,
+        "carbon_intensity": 0.397259709322076,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2003,
+        "co2_per_capita": 18.6676694689453,
+        "gdp_per_capita": 23757.5898471684,
+        "carbon_intensity": 0.384823728522702,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2004,
+        "co2_per_capita": 19.1634087908315,
+        "gdp_per_capita": 30886.0500949401,
+        "carbon_intensity": 0.38312572623585,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2005,
+        "co2_per_capita": 19.0378039300894,
+        "gdp_per_capita": 34535.20727091,
+        "carbon_intensity": 0.373490636073977,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2006,
+        "co2_per_capita": 19.0793285754815,
+        "gdp_per_capita": 36658.8243476122,
+        "carbon_intensity": 0.36916139256275,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2007,
+        "co2_per_capita": 19.2389222350972,
+        "gdp_per_capita": 41128.2476618402,
+        "carbon_intensity": 0.365263678592093,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2008,
+        "co2_per_capita": 19.02811960112,
+        "gdp_per_capita": 49811.2067218988,
+        "carbon_intensity": 0.355683901184324,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2009,
+        "co2_per_capita": 18.9151698120932,
+        "gdp_per_capita": 42954.8494884573,
+        "carbon_intensity": 0.354014281813389,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2010,
+        "co2_per_capita": 18.8509537372201,
+        "gdp_per_capita": 52313.8939041213,
+        "carbon_intensity": 0.350595728354591,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2011,
+        "co2_per_capita": 18.480821685778,
+        "gdp_per_capita": 62799.3895017032,
+        "carbon_intensity": 0.340370242279155,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2012,
+        "co2_per_capita": 18.1834489375025,
+        "gdp_per_capita": 68301.4402512587,
+        "carbon_intensity": 0.327833816450871,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2013,
+        "co2_per_capita": 17.5432435542019,
+        "gdp_per_capita": 68476.6788496118,
+        "carbon_intensity": 0.313461677524814,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2014,
+        "co2_per_capita": 16.8873574131124,
+        "gdp_per_capita": 62817.2061751737,
+        "carbon_intensity": 0.298511900747079,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2015,
+        "co2_per_capita": 16.8219551608068,
+        "gdp_per_capita": 56970.3613028094,
+        "carbon_intensity": 0.295275556905715,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2016,
+        "co2_per_capita": 16.8911897350521,
+        "gdp_per_capita": 50084.4440606385,
+        "carbon_intensity": 0.293081912349965,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2017,
+        "co2_per_capita": 16.7209445382487,
+        "gdp_per_capita": 54117.547718609,
+        "carbon_intensity": 0.28833305397935,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2018,
+        "co2_per_capita": 16.3939979308791,
+        "gdp_per_capita": 57410.1737346009,
+        "carbon_intensity": 0.278938966038956,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2019,
+        "co2_per_capita": 16.1007065925773,
+        "gdp_per_capita": 55194.7585097428,
+        "carbon_intensity": 0.272057333137275,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2020,
+        "co2_per_capita": 15.3043785143331,
+        "gdp_per_capita": 51983.4523666382,
+        "carbon_intensity": 0.262161080960125,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2021,
+        "co2_per_capita": 14.9787241100123,
+        "gdp_per_capita": 60758.9044397144,
+        "carbon_intensity": 0.251889164722103,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Australia",
+        "codigo_pais": "AUS",
+        "year": 2022,
+        "co2_per_capita": 14.530502863688,
+        "gdp_per_capita": 65169.5191118657,
+        "carbon_intensity": 0.237424737096607,
+        "region": "Oceanía",
+        "id_numerico": 36
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2000,
+        "co2_per_capita": 2.00787868943563,
+        "gdp_per_capita": 3766.54786339835,
+        "carbon_intensity": 0.294506081381515,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2001,
+        "co2_per_capita": 1.9928207750233,
+        "gdp_per_capita": 3176.28975052524,
+        "carbon_intensity": 0.292072560832628,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2002,
+        "co2_per_capita": 1.96879630651915,
+        "gdp_per_capita": 2855.94017137049,
+        "carbon_intensity": 0.283499396114186,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2003,
+        "co2_per_capita": 1.91839410561756,
+        "gdp_per_capita": 3090.6068907839,
+        "carbon_intensity": 0.276368332781879,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2004,
+        "co2_per_capita": 1.99978275095698,
+        "gdp_per_capita": 3663.82262497811,
+        "carbon_intensity": 0.275498426857074,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2005,
+        "co2_per_capita": 1.99935674253319,
+        "gdp_per_capita": 4827.78165890291,
+        "carbon_intensity": 0.269834444734221,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2006,
+        "co2_per_capita": 2.00204169117872,
+        "gdp_per_capita": 5934.14561857454,
+        "carbon_intensity": 0.262664838127605,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2007,
+        "co2_per_capita": 2.08496718576573,
+        "gdp_per_capita": 7409.69003822861,
+        "carbon_intensity": 0.260514959482657,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2008,
+        "co2_per_capita": 2.16839391882541,
+        "gdp_per_capita": 8908.33338467948,
+        "carbon_intensity": 0.260287533355168,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2009,
+        "co2_per_capita": 2.00746250710986,
+        "gdp_per_capita": 8678.6584730653,
+        "carbon_intensity": 0.243443985808256,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2010,
+        "co2_per_capita": 2.27112813109879,
+        "gdp_per_capita": 11403.2840038694,
+        "carbon_intensity": 0.258298969239114,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2011,
+        "co2_per_capita": 2.37418967936326,
+        "gdp_per_capita": 13396.6263158041,
+        "carbon_intensity": 0.261820880289002,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2012,
+        "co2_per_capita": 2.52901988702936,
+        "gdp_per_capita": 12521.7238454434,
+        "carbon_intensity": 0.275868054307785,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2013,
+        "co2_per_capita": 2.63744450973958,
+        "gdp_per_capita": 12458.8903396625,
+        "carbon_intensity": 0.281575553866694,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2014,
+        "co2_per_capita": 2.7310345760982,
+        "gdp_per_capita": 12274.9941630213,
+        "carbon_intensity": 0.292453913272279,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2015,
+        "co2_per_capita": 2.56818858918394,
+        "gdp_per_capita": 8936.1955889444,
+        "carbon_intensity": 0.287391716488527,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2016,
+        "co2_per_capita": 2.37533549789759,
+        "gdp_per_capita": 8836.28546025694,
+        "carbon_intensity": 0.276915252342919,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2017,
+        "co2_per_capita": 2.41694955353585,
+        "gdp_per_capita": 10080.5078722821,
+        "carbon_intensity": 0.280120414484441,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2018,
+        "co2_per_capita": 2.28562350357953,
+        "gdp_per_capita": 9300.66072904004,
+        "carbon_intensity": 0.262042609581353,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2019,
+        "co2_per_capita": 2.25869881785082,
+        "gdp_per_capita": 9029.83304401079,
+        "carbon_intensity": 0.25750605894179,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2020,
+        "co2_per_capita": 2.1466461829,
+        "gdp_per_capita": 7074.19407495707,
+        "carbon_intensity": 0.254492414982452,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2021,
+        "co2_per_capita": 2.41580858865319,
+        "gdp_per_capita": 7972.53696080695,
+        "carbon_intensity": 0.274547774675226,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "Brazil",
+        "codigo_pais": "BRA",
+        "year": 2022,
+        "co2_per_capita": 2.27889577215227,
+        "gdp_per_capita": 9281.33282136864,
+        "carbon_intensity": 0.252311186269326,
+        "region": "América Latina",
+        "id_numerico": 76
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2000,
+        "co2_per_capita": 2.88907594771294,
+        "gdp_per_capita": 969.199513696287,
+        "carbon_intensity": 1.29124003028333,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2001,
+        "co2_per_capita": 3.00747564571294,
+        "gdp_per_capita": 1065.40597574519,
+        "carbon_intensity": 1.2500449672447,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2002,
+        "co2_per_capita": 3.22795454545455,
+        "gdp_per_capita": 1163.55957673426,
+        "carbon_intensity": 1.23641856373563,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2003,
+        "co2_per_capita": 3.70467882645141,
+        "gdp_per_capita": 1306.97245408557,
+        "carbon_intensity": 1.29668547088091,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2004,
+        "co2_per_capita": 4.24069749050016,
+        "gdp_per_capita": 1530.92726215723,
+        "carbon_intensity": 1.35578118632061,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2005,
+        "co2_per_capita": 4.78299420120885,
+        "gdp_per_capita": 1777.64496828464,
+        "carbon_intensity": 1.38004797320084,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2006,
+        "co2_per_capita": 5.28052516361306,
+        "gdp_per_capita": 2129.25696999613,
+        "carbon_intensity": 1.35978460568449,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2007,
+        "co2_per_capita": 5.7076324565497,
+        "gdp_per_capita": 2734.72709877693,
+        "carbon_intensity": 1.29431903973798,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2008,
+        "co2_per_capita": 5.85225866357655,
+        "gdp_per_capita": 3523.44302065213,
+        "carbon_intensity": 1.21631287838271,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2009,
+        "co2_per_capita": 6.24909018523805,
+        "gdp_per_capita": 3898.24459158811,
+        "carbon_intensity": 1.19308296540098,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2010,
+        "co2_per_capita": 6.80718476794211,
+        "gdp_per_capita": 4629.24551710077,
+        "carbon_intensity": 1.18080550972293,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2011,
+        "co2_per_capita": 7.40185065816131,
+        "gdp_per_capita": 5703.76027973346,
+        "carbon_intensity": 1.17940683852303,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2012,
+        "co2_per_capita": 7.58441651466929,
+        "gdp_per_capita": 6405.0574241349,
+        "carbon_intensity": 1.12809715458083,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2013,
+        "co2_per_capita": 7.89327631231478,
+        "gdp_per_capita": 7147.03518622344,
+        "carbon_intensity": 1.0965825098719,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2014,
+        "co2_per_capita": 7.93164331637339,
+        "gdp_per_capita": 7781.06597484974,
+        "carbon_intensity": 1.0318822483914,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2015,
+        "co2_per_capita": 7.79057049265868,
+        "gdp_per_capita": 8175.33285077393,
+        "carbon_intensity": 0.952936184356233,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2016,
+        "co2_per_capita": 7.76322483949301,
+        "gdp_per_capita": 8254.86859320357,
+        "carbon_intensity": 0.894444935344965,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2017,
+        "co2_per_capita": 7.87802652170332,
+        "gdp_per_capita": 8979.67652709856,
+        "carbon_intensity": 0.854309443011614,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2018,
+        "co2_per_capita": 8.2177362485386,
+        "gdp_per_capita": 10085.6638148819,
+        "carbon_intensity": 0.838659800727931,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2019,
+        "co2_per_capita": 8.39147587098516,
+        "gdp_per_capita": 10342.9009524335,
+        "carbon_intensity": 0.810263287437438,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2020,
+        "co2_per_capita": 8.47858302033874,
+        "gdp_per_capita": 10627.4637989619,
+        "carbon_intensity": 0.801860230901059,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2021,
+        "co2_per_capita": 8.88715660313235,
+        "gdp_per_capita": 12887.4357242941,
+        "carbon_intensity": 0.774846489474757,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "China",
+        "codigo_pais": "CHN",
+        "year": 2022,
+        "co2_per_capita": 8.86482511020235,
+        "gdp_per_capita": 12970.6056414327,
+        "carbon_intensity": 0.749313334177565,
+        "region": "Asia",
+        "id_numerico": 156
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2000,
+        "co2_per_capita": 10.5993032021746,
+        "gdp_per_capita": 23925.8559901991,
+        "carbon_intensity": 0.301938915634639,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2001,
+        "co2_per_capita": 10.7525841705381,
+        "gdp_per_capita": 23878.3641471651,
+        "carbon_intensity": 0.301881882520065,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2002,
+        "co2_per_capita": 10.546202837135,
+        "gdp_per_capita": 25486.5942008748,
+        "carbon_intensity": 0.297264416383968,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2003,
+        "co2_per_capita": 10.6369632865784,
+        "gdp_per_capita": 30711.1022511331,
+        "carbon_intensity": 0.301586516359268,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2004,
+        "co2_per_capita": 10.4632650583049,
+        "gdp_per_capita": 34566.7359143735,
+        "carbon_intensity": 0.293190182442704,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2005,
+        "co2_per_capita": 10.2067903422435,
+        "gdp_per_capita": 35084.4363546269,
+        "carbon_intensity": 0.283332320379205,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2006,
+        "co2_per_capita": 10.3846207212787,
+        "gdp_per_capita": 36980.3349948954,
+        "carbon_intensity": 0.277224385989287,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2007,
+        "co2_per_capita": 10.0478127320359,
+        "gdp_per_capita": 42350.9217211489,
+        "carbon_intensity": 0.26035273774805,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2008,
+        "co2_per_capita": 10.1072965484379,
+        "gdp_per_capita": 46379.1647953479,
+        "carbon_intensity": 0.259096026461803,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2009,
+        "co2_per_capita": 9.37864424258525,
+        "gdp_per_capita": 42471.8868625226,
+        "carbon_intensity": 0.253885779395953,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2010,
+        "co2_per_capita": 9.96567124737992,
+        "gdp_per_capita": 42396.9665976293,
+        "carbon_intensity": 0.258668965929002,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2011,
+        "co2_per_capita": 9.81776726131477,
+        "gdp_per_capita": 47630.9761883572,
+        "carbon_intensity": 0.241089591633632,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2012,
+        "co2_per_capita": 9.94745307113612,
+        "gdp_per_capita": 44718.0159214069,
+        "carbon_intensity": 0.243604082873514,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2013,
+        "co2_per_capita": 10.1408601249876,
+        "gdp_per_capita": 47206.8353514242,
+        "carbon_intensity": 0.248034407363494,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2014,
+        "co2_per_capita": 9.61630846170469,
+        "gdp_per_capita": 48959.5991203133,
+        "carbon_intensity": 0.231147558225977,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2015,
+        "co2_per_capita": 9.60884887243027,
+        "gdp_per_capita": 41929.7549110722,
+        "carbon_intensity": 0.229165395619637,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2016,
+        "co2_per_capita": 9.58423383867929,
+        "gdp_per_capita": 42948.9381932694,
+        "carbon_intensity": 0.225421567436713,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2017,
+        "co2_per_capita": 9.36976518940283,
+        "gdp_per_capita": 45553.9341495339,
+        "carbon_intensity": 0.21518181453774,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2018,
+        "co2_per_capita": 9.00657809367265,
+        "gdp_per_capita": 48916.1686612154,
+        "carbon_intensity": 0.205133873202136,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2019,
+        "co2_per_capita": 8.38218043063623,
+        "gdp_per_capita": 47656.199739747,
+        "carbon_intensity": 0.189490901907181,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2020,
+        "co2_per_capita": 7.72103264767393,
+        "gdp_per_capita": 47394.8734504469,
+        "carbon_intensity": 0.182216407801049,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2021,
+        "co2_per_capita": 8.06128144646434,
+        "gdp_per_capita": 52349.2459994422,
+        "carbon_intensity": 0.183165069675579,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "Germany",
+        "codigo_pais": "DEU",
+        "year": 2022,
+        "co2_per_capita": 7.91182860265874,
+        "gdp_per_capita": 50506.5179638543,
+        "carbon_intensity": 0.176535809284335,
+        "region": "Europa",
+        "id_numerico": 276
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2000,
+        "co2_per_capita": 0.942309744278839,
+        "gdp_per_capita": 442.750218937263,
+        "carbon_intensity": 1.24528165291358,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2001,
+        "co2_per_capita": 0.939789720011458,
+        "gdp_per_capita": 450.357900514128,
+        "carbon_intensity": 1.20716867577432,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2002,
+        "co2_per_capita": 0.957620477500199,
+        "gdp_per_capita": 469.149928973927,
+        "carbon_intensity": 1.20665483381401,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2003,
+        "co2_per_capita": 0.969744882653011,
+        "gdp_per_capita": 544.143133545002,
+        "carbon_intensity": 1.15270321044574,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2004,
+        "co2_per_capita": 1.02822643182898,
+        "gdp_per_capita": 624.258826510066,
+        "carbon_intensity": 1.15194973298319,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2005,
+        "co2_per_capita": 1.05460489385527,
+        "gdp_per_capita": 710.488080408949,
+        "carbon_intensity": 1.11276633523263,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2006,
+        "co2_per_capita": 1.10810989189174,
+        "gdp_per_capita": 801.668353659022,
+        "carbon_intensity": 1.09906158881801,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2007,
+        "co2_per_capita": 1.18862350046436,
+        "gdp_per_capita": 1021.88707706826,
+        "carbon_intensity": 1.11164542513771,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2008,
+        "co2_per_capita": 1.25815998206335,
+        "gdp_per_capita": 992.519584923828,
+        "carbon_intensity": 1.15798709004047,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2009,
+        "co2_per_capita": 1.32284533301467,
+        "gdp_per_capita": 1094.94974598436,
+        "carbon_intensity": 1.14521986249365,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2010,
+        "co2_per_capita": 1.39129863287623,
+        "gdp_per_capita": 1347.51939071367,
+        "carbon_intensity": 1.12641222066683,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2011,
+        "co2_per_capita": 1.46337391608571,
+        "gdp_per_capita": 1445.46127486037,
+        "carbon_intensity": 1.14182418633433,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2012,
+        "co2_per_capita": 1.57607553513255,
+        "gdp_per_capita": 1429.32199520032,
+        "carbon_intensity": 1.1822668593635,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2013,
+        "co2_per_capita": 1.59945855716817,
+        "gdp_per_capita": 1432.84397512195,
+        "carbon_intensity": 1.14291630021741,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2014,
+        "co2_per_capita": 1.70517686000076,
+        "gdp_per_capita": 1553.88396075118,
+        "carbon_intensity": 1.14879607350258,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2015,
+        "co2_per_capita": 1.71550269097521,
+        "gdp_per_capita": 1583.99815907985,
+        "carbon_intensity": 1.08302063429906,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2016,
+        "co2_per_capita": 1.7202923565219,
+        "gdp_per_capita": 1707.50892912243,
+        "carbon_intensity": 1.0152419798892,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2017,
+        "co2_per_capita": 1.79545339877531,
+        "gdp_per_capita": 1950.10468280866,
+        "carbon_intensity": 1.00377687944633,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2018,
+        "co2_per_capita": 1.85989309419052,
+        "gdp_per_capita": 1966.25455171679,
+        "carbon_intensity": 0.987541064279464,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2019,
+        "co2_per_capita": 1.83688223212799,
+        "gdp_per_capita": 2041.42863698585,
+        "carbon_intensity": 0.948787771578454,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2020,
+        "co2_per_capita": 1.68040016064392,
+        "gdp_per_capita": 1907.04251637669,
+        "carbon_intensity": 0.930196032104661,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2021,
+        "co2_per_capita": 1.83702951699406,
+        "gdp_per_capita": 2239.61384367482,
+        "carbon_intensity": 0.934727877891763,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "India",
+        "codigo_pais": "IND",
+        "year": 2022,
+        "co2_per_capita": 1.96929618962877,
+        "gdp_per_capita": 2347.44829434623,
+        "carbon_intensity": 0.938559544252472,
+        "region": "Asia",
+        "id_numerico": 356
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2000,
+        "co2_per_capita": 1.38408579613851,
+        "gdp_per_capita": 763.711124950924,
+        "carbon_intensity": 0.757116012499023,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2001,
+        "co2_per_capita": 1.45853518944239,
+        "gdp_per_capita": 732.307093405708,
+        "carbon_intensity": 0.780553168160143,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2002,
+        "co2_per_capita": 1.46310550665851,
+        "gdp_per_capita": 881.002913569131,
+        "carbon_intensity": 0.759512552721027,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2003,
+        "co2_per_capita": 1.57132250644049,
+        "gdp_per_capita": 1043.2105838671,
+        "carbon_intensity": 0.788848910786188,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2004,
+        "co2_per_capita": 1.58011931285841,
+        "gdp_per_capita": 1126.84004447173,
+        "carbon_intensity": 0.764929365175302,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2005,
+        "co2_per_capita": 1.57055662745946,
+        "gdp_per_capita": 1238.21447629488,
+        "carbon_intensity": 0.728645168906147,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2006,
+        "co2_per_capita": 1.63888306289882,
+        "gdp_per_capita": 1558.31562847163,
+        "carbon_intensity": 0.730313937255441,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2007,
+        "co2_per_capita": 1.69488500402322,
+        "gdp_per_capita": 1823.21976255073,
+        "carbon_intensity": 0.719649681897247,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2008,
+        "co2_per_capita": 1.6541425247205,
+        "gdp_per_capita": 2124.55483920618,
+        "carbon_intensity": 0.671160117899128,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2009,
+        "co2_per_capita": 1.69126327047376,
+        "gdp_per_capita": 2218.48541852977,
+        "carbon_intensity": 0.664225193299245,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2010,
+        "co2_per_capita": 1.80134962735397,
+        "gdp_per_capita": 3065.68348377765,
+        "carbon_intensity": 0.674457436041295,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2011,
+        "co2_per_capita": 2.00399300866727,
+        "gdp_per_capita": 3579.46442466152,
+        "carbon_intensity": 0.715807735703383,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2012,
+        "co2_per_capita": 1.9954892890649,
+        "gdp_per_capita": 3632.27254030331,
+        "carbon_intensity": 0.680933877843231,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2013,
+        "co2_per_capita": 1.85640226795234,
+        "gdp_per_capita": 3566.60284506078,
+        "carbon_intensity": 0.607612093710242,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2014,
+        "co2_per_capita": 1.95102470107868,
+        "gdp_per_capita": 3441.06808464008,
+        "carbon_intensity": 0.615325247017506,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2015,
+        "co2_per_capita": 1.95721455259026,
+        "gdp_per_capita": 3288.22269725538,
+        "carbon_intensity": 0.595219586016454,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2016,
+        "co2_per_capita": 1.91626591013332,
+        "gdp_per_capita": 3521.46943457574,
+        "carbon_intensity": 0.560834778970066,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2017,
+        "co2_per_capita": 2.00394276108737,
+        "gdp_per_capita": 3798.88326174526,
+        "carbon_intensity": 0.56393175365479,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2018,
+        "co2_per_capita": 2.20953925241911,
+        "gdp_per_capita": 3860.95353090726,
+        "carbon_intensity": 0.596959550747945,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2019,
+        "co2_per_capita": 2.33979466524606,
+        "gdp_per_capita": 4106.94856160358,
+        "carbon_intensity": 0.607596330824437,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2020,
+        "co2_per_capita": 2.16976580881181,
+        "gdp_per_capita": 3853.70288774146,
+        "carbon_intensity": 0.580236759675006,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2021,
+        "co2_per_capita": 2.24993200107532,
+        "gdp_per_capita": 4287.17313995098,
+        "carbon_intensity": 0.584293391125397,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Indonesia",
+        "codigo_pais": "IDN",
+        "year": 2022,
+        "co2_per_capita": 2.5918955237502,
+        "gdp_per_capita": 4730.83484836107,
+        "carbon_intensity": 0.64396323718438,
+        "region": "Asia",
+        "id_numerico": 360
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2000,
+        "co2_per_capita": 4.02272121123337,
+        "gdp_per_capita": 7524.0271380091,
+        "carbon_intensity": 0.419821950631777,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2001,
+        "co2_per_capita": 3.94395058441036,
+        "gdp_per_capita": 7952.76479510706,
+        "carbon_intensity": 0.419642838624001,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2002,
+        "co2_per_capita": 3.94830756150866,
+        "gdp_per_capita": 7983.03398381759,
+        "carbon_intensity": 0.427200652648694,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2003,
+        "co2_per_capita": 4.08541432161845,
+        "gdp_per_capita": 7434.0746485155,
+        "carbon_intensity": 0.443007568661164,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2004,
+        "co2_per_capita": 4.12339368005276,
+        "gdp_per_capita": 7849.66759649565,
+        "carbon_intensity": 0.437667642663097,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2005,
+        "co2_per_capita": 4.22758379844974,
+        "gdp_per_capita": 8671.75891885163,
+        "carbon_intensity": 0.445406531308159,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2006,
+        "co2_per_capita": 4.32571227914951,
+        "gdp_per_capita": 9512.63575346699,
+        "carbon_intensity": 0.440777264533454,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2007,
+        "co2_per_capita": 4.32899168517287,
+        "gdp_per_capita": 10134.3327138119,
+        "carbon_intensity": 0.438259284388137,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2008,
+        "co2_per_capita": 4.27910076303278,
+        "gdp_per_capita": 10523.7685403244,
+        "carbon_intensity": 0.435472394821792,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2009,
+        "co2_per_capita": 4.12122098054155,
+        "gdp_per_capita": 8423.56933214711,
+        "carbon_intensity": 0.454173134027122,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2010,
+        "co2_per_capita": 4.19755809286418,
+        "gdp_per_capita": 9728.80078377082,
+        "carbon_intensity": 0.447068701728542,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2011,
+        "co2_per_capita": 4.22179978144365,
+        "gdp_per_capita": 10664.4944032313,
+        "carbon_intensity": 0.440876014271073,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2012,
+        "co2_per_capita": 4.33350424276325,
+        "gdp_per_capita": 10744.1335242686,
+        "carbon_intensity": 0.442984551393299,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2013,
+        "co2_per_capita": 4.17443117084187,
+        "gdp_per_capita": 11216.8008505428,
+        "carbon_intensity": 0.42864310719773,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2014,
+        "co2_per_capita": 4.01481960973153,
+        "gdp_per_capita": 11391.3773497683,
+        "carbon_intensity": 0.407080075100096,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2015,
+        "co2_per_capita": 4.05069677949307,
+        "gdp_per_capita": 10021.2386118827,
+        "carbon_intensity": 0.40421118949208,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2016,
+        "co2_per_capita": 4.06104469144067,
+        "gdp_per_capita": 9097.92397674769,
+        "carbon_intensity": 0.402063644225757,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2017,
+        "co2_per_capita": 4.05743329599921,
+        "gdp_per_capita": 9649.27816772402,
+        "carbon_intensity": 0.398030582759516,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2018,
+        "co2_per_capita": 3.83831705872518,
+        "gdp_per_capita": 10084.7937562021,
+        "carbon_intensity": 0.372765451722523,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2019,
+        "co2_per_capita": 3.92542377851696,
+        "gdp_per_capita": 10369.5553585271,
+        "carbon_intensity": 0.386381720823991,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2020,
+        "co2_per_capita": 3.46247141559905,
+        "gdp_per_capita": 8841.27075039868,
+        "carbon_intensity": 0.374943696463623,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2021,
+        "co2_per_capita": 3.54662489893704,
+        "gdp_per_capita": 10314.0506722115,
+        "carbon_intensity": 0.364576911065974,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Mexico",
+        "codigo_pais": "MEX",
+        "year": 2022,
+        "co2_per_capita": 3.52183828963573,
+        "gdp_per_capita": 11405.7940473759,
+        "carbon_intensity": 0.351717875808324,
+        "region": "América Latina",
+        "id_numerico": 484
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2000,
+        "co2_per_capita": 0.792790969926579,
+        "gdp_per_capita": 547.318298903379,
+        "carbon_intensity": 0.557643799667598,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2001,
+        "co2_per_capita": 0.818897081180304,
+        "gdp_per_capita": 566.428231812933,
+        "carbon_intensity": 0.558799724254984,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2002,
+        "co2_per_capita": 0.720895078592108,
+        "gdp_per_capita": 712.164852077686,
+        "carbon_intensity": 0.438395273540396,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2003,
+        "co2_per_capita": 0.7843536892773,
+        "gdp_per_capita": 763.388745367223,
+        "carbon_intensity": 0.456759294892533,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2004,
+        "co2_per_capita": 0.736921009510727,
+        "gdp_per_capita": 962.48104194733,
+        "carbon_intensity": 0.403835993723854,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2005,
+        "co2_per_capita": 0.710050686175941,
+        "gdp_per_capita": 1211.37703504386,
+        "carbon_intensity": 0.375836986760179,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2006,
+        "co2_per_capita": 0.621989926382773,
+        "gdp_per_capita": 1599.53891556365,
+        "carbon_intensity": 0.319106888777355,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2007,
+        "co2_per_capita": 0.550572897626193,
+        "gdp_per_capita": 1815.52697545827,
+        "carbon_intensity": 0.27244846715121,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2008,
+        "co2_per_capita": 0.581139578438694,
+        "gdp_per_capita": 2154.10543545364,
+        "carbon_intensity": 0.2769595282492,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2009,
+        "co2_per_capita": 0.499337659024901,
+        "gdp_per_capita": 1820.48633854782,
+        "carbon_intensity": 0.226497330831815,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2010,
+        "co2_per_capita": 0.566502430832841,
+        "gdp_per_capita": 2202.25672957344,
+        "carbon_intensity": 0.244660143420024,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2011,
+        "co2_per_capita": 0.606966647220167,
+        "gdp_per_capita": 2418.41316975875,
+        "carbon_intensity": 0.255998584998735,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2012,
+        "co2_per_capita": 0.580337328542393,
+        "gdp_per_capita": 2633.19734671361,
+        "carbon_intensity": 0.241439640548937,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2013,
+        "co2_per_capita": 0.63302873569183,
+        "gdp_per_capita": 2872.79083379398,
+        "carbon_intensity": 0.253684253581079,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2014,
+        "co2_per_capita": 0.660183629190404,
+        "gdp_per_capita": 3088.72131316169,
+        "carbon_intensity": 0.255527036205842,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2015,
+        "co2_per_capita": 0.621244733321397,
+        "gdp_per_capita": 2585.73360671797,
+        "carbon_intensity": 0.240258598839164,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2016,
+        "co2_per_capita": 0.631791150085677,
+        "gdp_per_capita": 2070.4127339595,
+        "carbon_intensity": 0.254568198939356,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2017,
+        "co2_per_capita": 0.579461406473008,
+        "gdp_per_capita": 1876.34027111773,
+        "carbon_intensity": 0.23731763618262,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2018,
+        "co2_per_capita": 0.592412108680957,
+        "gdp_per_capita": 2057.87944554011,
+        "carbon_intensity": 0.243612684954583,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2019,
+        "co2_per_capita": 0.60197968413501,
+        "gdp_per_capita": 3189.81286498516,
+        "carbon_intensity": 0.247571848089343,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2020,
+        "co2_per_capita": 0.555700571123744,
+        "gdp_per_capita": 2797.18458068686,
+        "carbon_intensity": 0.249339966587453,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2021,
+        "co2_per_capita": 0.599006670437755,
+        "gdp_per_capita": 2787.48779224428,
+        "carbon_intensity": 0.271453494266337,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Nigeria",
+        "codigo_pais": "NGA",
+        "year": 2022,
+        "co2_per_capita": 0.578271036832404,
+        "gdp_per_capita": 2899.16047470324,
+        "carbon_intensity": 0.256520159583223,
+        "region": "África",
+        "id_numerico": 566
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2000,
+        "co2_per_capita": 16.3953985610582,
+        "gdp_per_capita": 11714.5623675159,
+        "carbon_intensity": 0.736942833777957,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2001,
+        "co2_per_capita": 16.1835734476463,
+        "gdp_per_capita": 10805.311325122,
+        "carbon_intensity": 0.76362492205604,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2002,
+        "co2_per_capita": 16.3991276825131,
+        "gdp_per_capita": 10586.0543471363,
+        "carbon_intensity": 0.818915051752909,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2003,
+        "co2_per_capita": 16.4119297375647,
+        "gdp_per_capita": 11487.220410693,
+        "carbon_intensity": 0.790329294537676,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2004,
+        "co2_per_capita": 16.6257165924061,
+        "gdp_per_capita": 13154.4978989446,
+        "carbon_intensity": 0.771641957839217,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2005,
+        "co2_per_capita": 16.8475463633317,
+        "gdp_per_capita": 15975.7473782258,
+        "carbon_intensity": 0.771471682367951,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2006,
+        "co2_per_capita": 17.0903135744837,
+        "gdp_per_capita": 17563.6145370639,
+        "carbon_intensity": 0.790620293315071,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2007,
+        "co2_per_capita": 17.3405924711443,
+        "gdp_per_capita": 18596.1502627898,
+        "carbon_intensity": 0.818076243674125,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2008,
+        "co2_per_capita": 18.0563174565032,
+        "gdp_per_capita": 22320.4888964331,
+        "carbon_intensity": 0.834787357548192,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2009,
+        "co2_per_capita": 18.3345628771474,
+        "gdp_per_capita": 17718.3911648365,
+        "carbon_intensity": 0.890998540893409,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2010,
+        "co2_per_capita": 20.3047423300728,
+        "gdp_per_capita": 22028.3901426586,
+        "carbon_intensity": 0.930124134448957,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2011,
+        "co2_per_capita": 20.2940259487267,
+        "gdp_per_capita": 27126.7498747702,
+        "carbon_intensity": 0.870444393365203,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2012,
+        "co2_per_capita": 20.6100945700312,
+        "gdp_per_capita": 28733.4375513452,
+        "carbon_intensity": 0.871719465980383,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2013,
+        "co2_per_capita": 19.8087286694572,
+        "gdp_per_capita": 27865.465604962,
+        "carbon_intensity": 0.85910692879577,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2014,
+        "co2_per_capita": 20.6973806780556,
+        "gdp_per_capita": 27805.4850319422,
+        "carbon_intensity": 0.88432467043794,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2015,
+        "co2_per_capita": 20.5071259148746,
+        "gdp_per_capita": 23256.1549553531,
+        "carbon_intensity": 0.881793484531039,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2016,
+        "co2_per_capita": 19.6907023725829,
+        "gdp_per_capita": 22267.7217050387,
+        "carbon_intensity": 0.864270463852639,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2017,
+        "co2_per_capita": 19.4764691820848,
+        "gdp_per_capita": 23929.2907135982,
+        "carbon_intensity": 0.845511948015451,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2018,
+        "co2_per_capita": 19.2090840590601,
+        "gdp_per_capita": 29360.0658968566,
+        "carbon_intensity": 0.787466711646103,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2019,
+        "co2_per_capita": 19.2859458646594,
+        "gdp_per_capita": 29566.7933827436,
+        "carbon_intensity": 0.774359656406811,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2020,
+        "co2_per_capita": 18.2902881577409,
+        "gdp_per_capita": 24338.8307301067,
+        "carbon_intensity": 0.80123317916001,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2021,
+        "co2_per_capita": 19.1759893319934,
+        "gdp_per_capita": 31920.7653655643,
+        "carbon_intensity": 0.769419489481208,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "Saudi Arabia",
+        "codigo_pais": "SAU",
+        "year": 2022,
+        "co2_per_capita": 19.282874301046,
+        "gdp_per_capita": 38510.2276211037,
+        "carbon_intensity": 0.722017956337296,
+        "region": "Medio Oriente",
+        "id_numerico": 682
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2000,
+        "co2_per_capita": 7.36397941641679,
+        "gdp_per_capita": 3217.84693448467,
+        "carbon_intensity": 1.56651230823866,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2001,
+        "co2_per_capita": 7.51319828115408,
+        "gdp_per_capita": 2847.15191945908,
+        "carbon_intensity": 1.56967007795617,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2002,
+        "co2_per_capita": 7.72131022420827,
+        "gdp_per_capita": 2688.23676032806,
+        "carbon_intensity": 1.57038860614816,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2003,
+        "co2_per_capita": 8.11491084558816,
+        "gdp_per_capita": 4062.21755993786,
+        "carbon_intensity": 1.61921838293797,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2004,
+        "co2_per_capita": 8.69023374521021,
+        "gdp_per_capita": 5221.46333731721,
+        "carbon_intensity": 1.67527201673275,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2005,
+        "co2_per_capita": 8.81501533854301,
+        "gdp_per_capita": 5836.87663325127,
+        "carbon_intensity": 1.63057560459652,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2006,
+        "co2_per_capita": 8.81243167639557,
+        "gdp_per_capita": 6077.38293388876,
+        "carbon_intensity": 1.55944963624569,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2007,
+        "co2_per_capita": 9.10281000552084,
+        "gdp_per_capita": 6591.85535960564,
+        "carbon_intensity": 1.54509590775891,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2008,
+        "co2_per_capita": 9.54569945858325,
+        "gdp_per_capita": 6184.75474328399,
+        "carbon_intensity": 1.58837683687104,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2009,
+        "co2_per_capita": 8.83353970564321,
+        "gdp_per_capita": 6374.70560042992,
+        "carbon_intensity": 1.51076653219144,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2010,
+        "co2_per_capita": 8.87117430020844,
+        "gdp_per_capita": 7973.47195771517,
+        "carbon_intensity": 1.48996576272868,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2011,
+        "co2_per_capita": 8.37758623633968,
+        "gdp_per_capita": 8646.05571071635,
+        "carbon_intensity": 1.38081652757273,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2012,
+        "co2_per_capita": 8.57667504044573,
+        "gdp_per_capita": 8076.97678479741,
+        "carbon_intensity": 1.40106085192151,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2013,
+        "co2_per_capita": 8.68872722515024,
+        "gdp_per_capita": 7331.65467384919,
+        "carbon_intensity": 1.40802152358574,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2014,
+        "co2_per_capita": 8.75262375978144,
+        "gdp_per_capita": 6856.73137092522,
+        "carbon_intensity": 1.42203336757559,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2015,
+        "co2_per_capita": 8.14948651738695,
+        "gdp_per_capita": 6112.27382485974,
+        "carbon_intensity": 1.33329866280557,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2016,
+        "co2_per_capita": 8.03701551903542,
+        "gdp_per_capita": 5651.20585165749,
+        "carbon_intensity": 1.31856053552083,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2017,
+        "co2_per_capita": 8.14751418587147,
+        "gdp_per_capita": 6618.33508255701,
+        "carbon_intensity": 1.33005611747563,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2018,
+        "co2_per_capita": 8.077016906198,
+        "gdp_per_capita": 6914.1780318076,
+        "carbon_intensity": 1.32036295938364,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2019,
+        "co2_per_capita": 8.01412233375962,
+        "gdp_per_capita": 6533.71121032856,
+        "carbon_intensity": 1.32841845332356,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2020,
+        "co2_per_capita": 7.4445834618028,
+        "gdp_per_capita": 5580.60383075189,
+        "carbon_intensity": 1.33664962196747,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2021,
+        "co2_per_capita": 7.29340675223128,
+        "gdp_per_capita": 6828.75624590017,
+        "carbon_intensity": 1.26821799421769,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "South Africa",
+        "codigo_pais": "ZAF",
+        "year": 2022,
+        "co2_per_capita": 6.88263936192025,
+        "gdp_per_capita": 6534.24867783397,
+        "carbon_intensity": 1.18935542791345,
+        "region": "África",
+        "id_numerico": 710
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2000,
+        "co2_per_capita": 21.0118753202743,
+        "gdp_per_capita": 36329.9560727102,
+        "carbon_intensity": 0.434311319811155,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2001,
+        "co2_per_capita": 20.6255077855762,
+        "gdp_per_capita": 37133.623113437,
+        "carbon_intensity": 0.426490366975372,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2002,
+        "co2_per_capita": 19.9103793387111,
+        "gdp_per_capita": 37997.7596573051,
+        "carbon_intensity": 0.408592717228362,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2003,
+        "co2_per_capita": 19.9681657791826,
+        "gdp_per_capita": 39490.2749557007,
+        "carbon_intensity": 0.402075296936323,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2004,
+        "co2_per_capita": 20.0815597947275,
+        "gdp_per_capita": 41724.6316287624,
+        "carbon_intensity": 0.392996609993057,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2005,
+        "co2_per_capita": 19.9249914215479,
+        "gdp_per_capita": 44123.4070679055,
+        "carbon_intensity": 0.38029545530716,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2006,
+        "co2_per_capita": 19.4048177077015,
+        "gdp_per_capita": 46302.0008800056,
+        "carbon_intensity": 0.363824939757109,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2007,
+        "co2_per_capita": 19.4956606869752,
+        "gdp_per_capita": 48050.2237771135,
+        "carbon_intensity": 0.36177173906039,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2008,
+        "co2_per_capita": 18.7089026291301,
+        "gdp_per_capita": 48570.0459804586,
+        "carbon_intensity": 0.350073964014268,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2009,
+        "co2_per_capita": 17.1890632001903,
+        "gdp_per_capita": 47194.9433547336,
+        "carbon_intensity": 0.333048304734052,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2010,
+        "co2_per_capita": 17.847084306938,
+        "gdp_per_capita": 48642.6100179312,
+        "carbon_intensity": 0.339583731190289,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2011,
+        "co2_per_capita": 17.0203888981196,
+        "gdp_per_capita": 50024.868799398,
+        "carbon_intensity": 0.321402216887439,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2012,
+        "co2_per_capita": 16.1854221004814,
+        "gdp_per_capita": 51708.4011556577,
+        "carbon_intensity": 0.301190547159063,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2013,
+        "co2_per_capita": 16.495975221911,
+        "gdp_per_capita": 53179.0127634561,
+        "carbon_intensity": 0.302886156310728,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2014,
+        "co2_per_capita": 16.4248953102317,
+        "gdp_per_capita": 54973.4207515712,
+        "carbon_intensity": 0.296507953428833,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2015,
+        "co2_per_capita": 15.9501022949136,
+        "gdp_per_capita": 56572.9188996063,
+        "carbon_intensity": 0.281938825239307,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2016,
+        "co2_per_capita": 15.5045482189269,
+        "gdp_per_capita": 57638.1018367192,
+        "carbon_intensity": 0.27128869983103,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2017,
+        "co2_per_capita": 15.1847127213968,
+        "gdp_per_capita": 59635.0984397965,
+        "carbon_intensity": 0.261122411946813,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2018,
+        "co2_per_capita": 15.5796456645972,
+        "gdp_per_capita": 62499.8744390068,
+        "carbon_intensity": 0.261725488597865,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2019,
+        "co2_per_capita": 15.0439662080505,
+        "gdp_per_capita": 64746.4506778863,
+        "carbon_intensity": 0.247633268892956,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2020,
+        "co2_per_capita": 13.4715821678248,
+        "gdp_per_capita": 63515.9491807833,
+        "carbon_intensity": 0.227581012960174,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2021,
+        "co2_per_capita": 14.3161154347115,
+        "gdp_per_capita": 70205.050916026,
+        "carbon_intensity": 0.228399142517971,
+        "region": "América del Norte",
+        "id_numerico": 840
+      },
+      {
+        "pais": "United States",
+        "codigo_pais": "USA",
+        "year": 2022,
+        "co2_per_capita": 14.4177148825165,
+        "gdp_per_capita": 76657.2488844403,
+        "carbon_intensity": 0.225678320118737,
+        "region": "América del Norte",
+        "id_numerico": 840
       }
-      const el = document.getElementById('vis');
-      vegaEmbed("#vis", spec, embedOpt)
-        .catch(error => showError(el, error));
-    })(vegaEmbed);
-
-  </script>
-</body>
-</html>
+    ]
+  }
