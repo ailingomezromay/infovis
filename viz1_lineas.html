@@ -45,7 +45,12 @@
       },
       {"field": "region", "title": "Región", "type": "nominal"}
     ],
-    "x": {"field": "year", "title": "Año", "type": "ordinal"},
+    "x": {
+      "axis": {"labelAngle": 0, "labelFontSize": 9},
+      "field": "year",
+      "title": "Año",
+      "type": "ordinal"
+    },
     "y": {
       "field": "co2_per_capita",
       "title": "CO₂ per cápita (toneladas)",
@@ -2837,3 +2842,4 @@
       }
     ]
   }
+}
