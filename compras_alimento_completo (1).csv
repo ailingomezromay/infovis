@@ -1,0 +1,39 @@
+Fecha,Dia,Mes,Año,Plataforma,Tipo,Marca,Producto,UM,Precio_unitario,Precio_unitario_Redondeo,Precio_total,Precio_total_Redondeo,Notas
+2021-11-08,8,11,2021,ML,leche maternidad,KMR,Leche maternidad en polvo para gatitos + jeringa médica 5ml,1.0,1380.0,1380,1380.0,1380,Primera compra. Leche $1.200 + jeringa $180
+2021-12-06,6,12,2021,ML,leche maternidad,KMR,Leche maternidad en polvo para gatitos (recarga),1.0,1200.0,1200,1200.0,1200,Recarga mensual
+2022-01-05,5,1,2022,ML,leche maternidad,KMR,Leche maternidad en polvo para gatitos (recarga),1.0,1200.0,1200,1200.0,1200,Último mes de leche
+2022-02-07,7,2,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg,4.0,2400.0,2400,2400.0,2400,Rinde ~2 meses para 2 gatos
+2022-02-24,24,2,2022,ML,Seco,Vital Can Balanced,Gato Adulto 1 - Sabor mix,15.0,3730.4,3730,55956.0,55956,No adjunto fc ML
+2022-04-10,10,4,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg,4.0,2500.0,2500,2500.0,2500,
+2022-05-31,31,5,2022,ML,Seco,Vital Can Balanced,Gato Adulto 1 - Sabor mix,15.0,4658.0,4658,69870.0,69870,FCB-0030-00045500
+2022-06-08,8,6,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg,4.0,2900.0,2900,2900.0,2900,
+2022-08-07,7,8,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg,4.0,3100.0,3100,3100.0,3100,
+2022-08-24,24,8,2022,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,15.0,4754.0,4754,71310.0,71310,FCB-0030-00063198
+2022-10-09,9,10,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg,4.0,3200.0,3200,3200.0,3200,Último mes solo Isi y Micky
+2022-12-10,10,12,2022,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg — Isi y Micky,4.0,3500.0,3500,3500.0,3500,Kendra y Ron aún con leche materna
+2023-02-05,5,2,2023,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg — Kendra y Ron,4.0,4800.0,4800,4800.0,4800,Primera compra kitten para Kendra y Ron
+2023-03-06,6,3,2023,ML,alimento seco,Royal Canin,Royal Canin Adult bolsa 4kg — Isi y Micky,4.0,5200.0,5200,5200.0,5200,Isi y Micky pasan a adulto
+2023-04-05,5,4,2023,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg — Kendra y Ron,4.0,5500.0,5500,5500.0,5500,
+2023-05-07,7,5,2023,ML,alimento seco,Royal Canin,Royal Canin Adult bolsa 4kg — Isi y Micky,4.0,5800.0,5800,5800.0,5800,
+2023-06-05,5,6,2023,ML,alimento seco,Royal Canin,Royal Canin Kitten bolsa 4kg — Kendra y Ron,4.0,6200.0,6200,6200.0,6200,
+2023-07-08,8,7,2023,ML,alimento seco,Royal Canin,Royal Canin Adult bolsa 4kg — Isi y Micky,4.0,6800.0,6800,6800.0,6800,
+2023-08-02,2,8,2023,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,15.0,2849.133333,2849,42737.0,42737,No adjunto fc ML
+2023-09-27,27,9,2023,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,15.0,2982.466667,2982,44737.0,44737,No adjunto fc ML
+2023-12-01,1,12,2023,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,15.0,3315.8,3316,49737.0,49737,No adjunto fc ML
+2024-02-05,5,2,2024,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,15.0,3487.0,3487,52305.0,52305,FCB-00007-00014920
+2024-04-08,8,4,2024,ML,Seco,Vital Can Complete,Gato Adulto 1 - Sabor mix,16.5,484.0606061,484,7987.0,7987,No adjunto fc ML
+2024-06-28,28,6,2024,ML,Seco,Purina Excellent Adult,Gato Adulto 1- Sabor Pollo/Arroz / Carne,15.0,4020.333333,4020,60305.0,60305,No adjunto fc ML
+2024-08-27,27,8,2024,ML,Seco,Nutrique  Ultra Premium Healthy Maintenance,Gato Adulto 1 - Sabor mix,2.0,13985.0,13985,27970.0,27970,FCB-00011-00014509
+2024-10-01,1,10,2024,ML,Seco,Nutrique  Ultra Premium Healthy Maintenance,Gato Adulto 1 - Sabor mix,7.5,8928.533333,8929,66964.0,66964,FCB-00003-00033799
+2024-11-06,6,11,2024,ML,Seco,Nutrique  Ultra Premium Healthy Maintenance,Gato Adulto 1 - Sabor mix,7.5,10350.0,10350,77625.0,77625,FCB-00003-00037348
+2024-12-31,31,12,2024,ML,Seco,Purina Excellent Adult,Gato Adulto 1- Sabor Pollo/Arroz / Carne,7.5,7121.2,7121,53409.0,53409,FCB-0005-00063451
+2025-02-03,3,2,2025,ML,Seco,Purina Excellent Adult,Gato Adulto 1- Sabor Pollo/Arroz / Carne,7.5,7587.333333,7587,56905.0,56905,FCB-0007-00088651
+2025-03-05,5,3,2025,ML,Seco,Purina Excellent Adult,Gato Adulto 1- Sabor Pollo/Arroz / Carne,7.5,7587.333333,7587,56905.0,56905,FCB-0008-00102210
+2025-04-16,16,4,2025,ML,Seco,Purina Excellent Adult,Gato Adulto 1- Sabor Pollo/Arroz / Carne,7.5,7587.333333,7587,56905.0,56905,FCB-0008-00124512
+2025-09-08,8,9,2025,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,7.5,10533.19867,10533,78998.99,78999,FCB-0005-004870000
+2025-09-30,30,9,2025,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,7.5,11599.86667,11600,86999.0,86999,FCB-00001-00004193
+2025-11-28,28,11,2025,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,7.5,10533.19867,10533,78998.99,78999,FCB-00001-00011656
+2026-01-08,8,1,2026,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,7.5,12266.532,12267,91998.99,91999,FCB-00001-00013957
+2026-02-25,25,2,2026,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,1.5,18118.8,18119,27178.2,27178,FCB-00009-00133729
+2026-03-03,3,3,2026,ML,Seco,Royal Canin feline health Nutrition sensible,Gato Adulto 1 - Sabor mix,7.5,12799.86667,12800,95999.0,95999,FCB-00001-00021436
+2026-04-21,21,4,2026,ML,Seco,Royal Canni Gato castrado,Gato Adulto 1 - Sabor mix,15.0,8250.733333,8251,123761.0,123761,Aun no esta la fc adjunta en ML
