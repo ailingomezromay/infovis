@@ -1339,15 +1339,32 @@
     </div>
   </div>
   <div class="viz-container fade-in">
-    <div class="viz-inner" style="text-align:center; min-height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
-      <div style="font-size:0.7rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-muted);">📌 REEMPLAZÁ ESTE BLOQUE CON TU EMBED DE TABLEAU</div>
-      <div style="font-size:0.82rem; color:var(--ink-muted); max-width:400px; line-height:1.7;">
-        En Tableau Public publicá la viz → Share → copiá el código embed.<br>
-        Pegalo acá reemplazando todo este <code style="background:var(--stone); padding:2px 6px; border-radius:3px; font-size:0.75rem;">div.viz-inner</code>
+    <div class="viz-inner" style="padding:0;">
+      <div class='tableauPlaceholder' style='position:relative; width:100%; height:500px;'>
+        <noscript><a href='#'><img alt='¿En qué marca gasté más a lo largo de los años?' src='https://public.tableau.com/static/images/En/Enqumarcagastmsalolargodelosaos/Enqumarcagastmsalolargodelosaos/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='width:100%;height:500px;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Enqumarcagastmsalolargodelosaos/Enqumarcagastmsalolargodelosaos' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/En/Enqumarcagastmsalolargodelosaos/Enqumarcagastmsalolargodelosaos/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+        </object>
       </div>
-      <div style="border:1.5px dashed var(--line); border-radius:4px; padding:16px 32px; font-size:0.78rem; color:var(--rust); font-weight:500;">
-        Tableau · Precio por marca en el tiempo (2021–2026)
-      </div>
+      <script type='text/javascript'>
+        var divElement = document.querySelector('.tableauPlaceholder');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';vizElement.style.height='500px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
     </div>
     <div class="viz-source">Fuente: registro personal de compras en Mercado Libre (2021–2026) · CSV: tableau_marcas.csv</div>
   </div>
